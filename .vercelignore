@@ -1,0 +1,14 @@
+# Vercel deployment ignore file
+data/dataset/
+data/srs_requirements_3000.*
+data/training*.csv
+data/history.db
+__pycache__/
+*.pyc
+.git/
+.venv/
+venv/
+test_api.py
+gen_srs.py
+run_app.bat
+start_server.ps1

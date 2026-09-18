@@ -9,7 +9,20 @@ sentence embeddings produced by a Sentence-Transformers model.
 from typing import List, TypedDict, Dict, Any, Optional
 
 import numpy as np
-from sentence_transformers import SentenceTransformer
+
+try:
+    from sentence_transformers import SentenceTransformer
+    HAS_SENTENCE_TRANSFORMERS = True
+except Exception:
+    SentenceTransformer = None
+    HAS_SENTENCE_TRANSFORMERS = False
+
+try:
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity as sk_cosine_similarity
+except Exception:
+    TfidfVectorizer = None
+    sk_cosine_similarity = None
 
 
 class DuplicatePair(TypedDict):
@@ -27,8 +40,8 @@ class DuplicatePair(TypedDict):
 
 class DuplicateDetector:
     """
-    Wraps a Sentence-Transformers model to compute semantic similarity
-    between requirement statements and flag likely duplicates.
+    Wraps a Sentence-Transformers model with high-speed TF-IDF fallback
+    for zero-dependency / Vercel serverless execution.
     """
 
     def __init__(
@@ -36,21 +49,13 @@ class DuplicateDetector:
         model_name: str = "all-MiniLM-L6-v2",
         similarity_threshold: float = 0.80,
     ) -> None:
-        """
-        Initialize the duplicate detector by loading the embedding model.
-
-        Args:
-            model_name: Name of the Sentence-Transformers model to load.
-            similarity_threshold: Cosine similarity threshold above which
-                two requirements are flagged (0.0 - 1.0).
-        """
         self._similarity_threshold = similarity_threshold
-        try:
-            self._model = SentenceTransformer(model_name)
-        except Exception as exc:  # pylint: disable=broad-except
-            raise RuntimeError(
-                f"Failed to load Sentence-Transformers model '{model_name}': {exc}"
-            ) from exc
+        self._model = None
+        if HAS_SENTENCE_TRANSFORMERS:
+            try:
+                self._model = SentenceTransformer(model_name)
+            except Exception:
+                self._model = None
 
     @staticmethod
     def _cosine_similarity_matrix(embeddings: np.ndarray) -> np.ndarray:
@@ -90,10 +95,17 @@ class DuplicateDetector:
             for r in requirements
         ]
 
-        # Fast sentence encoding
-        embeddings = self._model.encode(string_reqs, show_progress_bar=False, batch_size=64)
-        embeddings = np.asarray(embeddings)
-        similarity_matrix = self._cosine_similarity_matrix(embeddings)
+        # Fast sentence encoding or TF-IDF fallback
+        if self._model is not None:
+            embeddings = self._model.encode(string_reqs, show_progress_bar=False, batch_size=64)
+            embeddings = np.asarray(embeddings)
+            similarity_matrix = self._cosine_similarity_matrix(embeddings)
+        elif TfidfVectorizer is not None:
+            vec = TfidfVectorizer(ngram_range=(1, 2), stop_words="english")
+            tfidf_mat = vec.fit_transform(string_reqs)
+            similarity_matrix = (tfidf_mat * tfidf_mat.T).toarray()
+        else:
+            similarity_matrix = np.zeros((len(string_reqs), len(string_reqs)))
 
         # Vectorized upper triangle extraction
         upper_tri = np.triu(similarity_matrix, k=1)

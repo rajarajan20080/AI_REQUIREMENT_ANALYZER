@@ -12,15 +12,33 @@ import sqlite3
 from datetime import datetime
 from typing import Dict, List, Optional, Any
 
+import tempfile
+import shutil
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_DIR = os.path.join(BASE_DIR, "data")
 DB_PATH = os.path.join(DB_DIR, "history.db")
 
 
 def _get_db_path() -> str:
-    """Resolve database path reliably."""
-    os.makedirs(DB_DIR, exist_ok=True)
-    return DB_PATH
+    """
+    Resolve database path reliably across local and serverless/Vercel environments.
+    """
+    # Check if running in Vercel or AWS Lambda serverless environment
+    if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
+        tmp_db = os.path.join(tempfile.gettempdir(), "history.db")
+        if not os.path.exists(tmp_db) and os.path.exists(DB_PATH):
+            try:
+                shutil.copyfile(DB_PATH, tmp_db)
+            except Exception:
+                pass
+        return tmp_db
+
+    try:
+        os.makedirs(DB_DIR, exist_ok=True)
+        return DB_PATH
+    except (OSError, PermissionError):
+        return os.path.join(tempfile.gettempdir(), "history.db")
 
 
 def init_db() -> None:
