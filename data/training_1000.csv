@@ -1,0 +1,1682 @@
+requirement_text,label
+The system shall allow users to register using their email address and password.,Functional
+The system shall allow users to log in using valid credentials.,Functional
+The system shall allow users to reset their password via email verification.,Functional
+The system shall allow administrators to add new products to the inventory.,Functional
+The system shall allow administrators to remove products from the inventory.,Functional
+The system shall allow customers to add items to a shopping cart.,Functional
+The system shall allow customers to remove items from a shopping cart.,Functional
+The system shall allow customers to checkout and complete a purchase.,Functional
+The system shall generate an invoice after a successful purchase.,Functional
+The system shall send an order confirmation email to the customer.,Functional
+The system shall allow users to update their profile information.,Functional
+The system shall allow users to upload a profile picture.,Functional
+The system shall allow managers to generate monthly sales reports.,Functional
+The system shall allow managers to export reports as CSV files.,Functional
+The system shall allow users to search for products by keyword.,Functional
+The system shall allow users to filter search results by category.,Functional
+The system shall allow users to sort search results by price.,Functional
+The system shall allow customers to leave a review for a purchased product.,Functional
+The system shall allow customers to rate a product from one to five stars.,Functional
+The system shall allow administrators to approve or reject product reviews.,Functional
+The system shall allow users to track the delivery status of an order.,Functional
+The system shall allow users to cancel an order before it is shipped.,Functional
+The system shall allow users to request a refund for a returned item.,Functional
+The system shall notify administrators when inventory falls below a threshold.,Functional
+The system shall allow users to add products to a wishlist.,Functional
+The system shall allow employees to clock in and clock out of shifts.,Functional
+The system shall allow HR staff to generate payroll reports.,Functional
+The system shall allow students to enroll in available courses.,Functional
+The system shall allow instructors to upload course materials.,Functional
+The system shall allow students to submit assignments online.,Functional
+The system shall allow instructors to grade submitted assignments.,Functional
+The system shall allow patients to schedule appointments with doctors.,Functional
+The system shall allow doctors to view a patient's medical history.,Functional
+The system shall allow pharmacists to update medication inventory.,Functional
+The system shall allow users to make payments using a credit card.,Functional
+The system shall allow users to make payments using digital wallets.,Functional
+The system shall allow administrators to create user roles and permissions.,Functional
+The system shall allow users to log out of their account.,Functional
+The system shall allow users to attach files to support tickets.,Functional
+The system shall allow support staff to respond to customer tickets.,Functional
+The system shall allow users to view their transaction history.,Functional
+The system shall allow drivers to accept or decline a delivery request.,Functional
+The system shall allow users to book a ride from their current location.,Functional
+The system shall allow restaurants to update their menu items.,Functional
+The system shall allow customers to place a food order from a restaurant menu.,Functional
+The system shall allow users to subscribe to a newsletter.,Functional
+The system shall allow users to unsubscribe from email notifications.,Functional
+The system shall allow admins to bulk import user data from a spreadsheet.,Functional
+The system shall allow users to share content on social media platforms.,Functional
+The system shall respond to user requests within 2 seconds for 95 percent of transactions.,Non-Functional
+The system shall be available 99.9 percent of the time excluding scheduled maintenance.,Non-Functional
+The system shall support up to 10000 concurrent users without performance degradation.,Non-Functional
+The system shall encrypt all sensitive data using AES-256 encryption.,Non-Functional
+The system shall comply with GDPR data protection regulations.,Non-Functional
+The user interface shall be intuitive and require no more than 30 minutes of training.,Non-Functional
+The system shall be able to scale horizontally to handle increased load.,Non-Functional
+The system shall recover from a failure within 5 minutes.,Non-Functional
+The system shall maintain a 99.99 percent uptime service level agreement.,Non-Functional
+The system shall log all user actions for auditing purposes.,Non-Functional
+The system shall support internationalization for at least five languages.,Non-Functional
+The system shall be accessible in accordance with WCAG 2.1 AA standards.,Non-Functional
+The system shall back up all data automatically every 24 hours.,Non-Functional
+The system shall restrict access to authorized users only through role-based access control.,Non-Functional
+The system shall use two-factor authentication for administrator accounts.,Non-Functional
+The mobile application shall be compatible with Android 10 and above.,Non-Functional
+The system shall process a minimum of 1000 transactions per second at peak load.,Non-Functional
+The system shall have a mean time to recovery of less than 10 minutes.,Non-Functional
+The system shall maintain data consistency across distributed database nodes.,Non-Functional
+"The system shall be portable across Windows, Linux, and macOS platforms.",Non-Functional
+The system shall degrade gracefully under high load conditions.,Non-Functional
+The system shall support automated regression testing for every release.,Non-Functional
+The system shall provide a response time of under 500 milliseconds for API calls.,Non-Functional
+"The system shall be maintainable with modular, well-documented source code.",Non-Functional
+The system shall ensure password data is never stored in plain text.,Non-Functional
+The system shall support secure communication using TLS 1.2 or higher.,Non-Functional
+The system shall handle a database of up to 50 million records efficiently.,Non-Functional
+The system shall be resilient to distributed denial-of-service attacks.,Non-Functional
+The user interface shall be responsive and adapt to different screen sizes.,Non-Functional
+The system shall provide 24x7 monitoring and alerting for critical services.,Non-Functional
+The system shall ensure interoperability with third-party payment gateways.,Non-Functional
+The system shall limit failed login attempts to 5 before locking the account.,Non-Functional
+The system shall support graceful degradation when third-party services are unavailable.,Non-Functional
+The system shall be compatible with screen readers for visually impaired users.,Non-Functional
+The system shall support seamless failover to a backup server during outages.,Non-Functional
+The system shall allow managers to schedule automatic report generation on a weekly basis.,Functional
+The system shall allow users to reply to a comment left by another user.,Functional
+The system shall support integration testing through a dedicated staging environment.,Non-Functional
+The system shall allow customers to apply a discount coupon at checkout.,Functional
+The system shall ensure that database backups are encrypted at rest.,Non-Functional
+"The system shall use a modern, secure, and maintainable technology stack.",Non-Functional
+The system shall allow instructors to upload course materials for students.,Functional
+The system shall allow users to create a group chat with multiple participants.,Functional
+The system shall be resilient to single points of failure in its architecture.,Non-Functional
+The system shall encrypt all sensitive user data using AES-256 encryption.,Non-Functional
+The system shall ensure high availability of critical services during business hours.,Non-Functional
+The system shall allow administrators to approve or reject a submitted review.,Functional
+The system shall support a flexible and scalable architecture as needed.,Non-Functional
+The system shall be robust enough to handle malformed input gracefully.,Non-Functional
+The system shall allow citizens to pay property taxes through the portal.,Functional
+The system shall calculate the optimal delivery route based on traffic conditions.,Functional
+The system shall allow a fleet manager to track the real-time location of a vehicle.,Functional
+The system shall send a push notification when a new message is received.,Functional
+The system shall allow a sensor to report temperature readings every five minutes.,Functional
+The system shall allow users to share a post to an external social media platform.,Functional
+The system shall notify students when a new grade is posted.,Functional
+The system shall allow users to delete a sent message within five minutes.,Functional
+The system shall minimize latency for users located in different geographic regions.,Non-Functional
+The system shall allow a caseworker to update the status of a benefits application.,Functional
+The system shall allow administrators to assign a patient to an available hospital bed.,Functional
+The system shall provide clear and consistent error codes for API consumers.,Non-Functional
+The system shall protect against common web vulnerabilities such as SQL injection and XSS.,Non-Functional
+The system shall automatically back up data every twenty-four hours.,Non-Functional
+The system shall be deployable on both cloud and on-premises infrastructure.,Non-Functional
+The system shall allow users to report an inappropriate review.,Functional
+The system shall allow students to submit an assignment before the deadline.,Functional
+The system shall allow HR staff to onboard a new employee profile.,Functional
+The system shall be fast and responsive under normal conditions.,Non-Functional
+The system shall be maintainable with minimal downtime during updates.,Non-Functional
+The system shall allow parents to view their child's academic progress.,Functional
+The system shall allow a clerk to process a marriage certificate application.,Functional
+The system shall allow instructors to grade a submitted assignment.,Functional
+The system shall ensure that all financial transactions are processed securely.,Non-Functional
+The system shall allow administrators to generate a transcript for a graduating student.,Functional
+The system shall allow students to enroll in an available course.,Functional
+The system shall be intuitive enough for first-time users to complete a purchase without assistance.,Non-Functional
+The system shall automatically log out an inactive user session after fifteen minutes.,Non-Functional
+The system shall allow warehouse staff to scan a barcode to update inventory count.,Functional
+The system shall support localization for at least five languages.,Non-Functional
+The system shall allow users to enable two-factor authentication for their account.,Functional
+The system shall allow customers to track the shipping status of an order.,Functional
+The system shall allow employees to view their payslip online.,Functional
+The system shall calculate interest on a savings account balance on a monthly basis.,Functional
+The system shall allow customers to download a monthly account statement.,Functional
+The system shall allow patients to cancel a scheduled appointment.,Functional
+The system shall allow customers to freeze their debit card temporarily.,Functional
+The system shall allow patients to schedule an appointment with a doctor.,Functional
+The system shall allow users to follow another user's public profile.,Functional
+The system shall provide sufficient logging detail to support troubleshooting.,Non-Functional
+The system shall allow administrators to broadcast an announcement to all users.,Functional
+The system shall allow citizens to apply for a passport renewal online.,Functional
+The system shall support graceful degradation of features under high load.,Non-Functional
+The system shall support up to ten thousand concurrent users without performance degradation.,Non-Functional
+The system shall handle a reasonably large number of users efficiently.,Non-Functional
+The system shall allow customers to cancel an order before it ships.,Functional
+The system shall allow users to link their account to a third-party login provider.,Functional
+The system shall allow users to filter search results by customer rating.,Functional
+The system shall support role-based access control to restrict sensitive operations.,Non-Functional
+The system shall be designed with a modular architecture to simplify future maintenance.,Non-Functional
+The system shall allow customers to apply for a loan through the mobile application.,Functional
+The system shall ensure that all API endpoints require authentication.,Non-Functional
+The system shall allow employees to submit a leave request.,Functional
+The system shall provide appropriate error messages when something goes wrong.,Non-Functional
+The system shall support horizontal scaling to accommodate business growth.,Non-Functional
+The system should be user-friendly and easy to use for all customers.,Non-Functional
+The system shall log all administrative actions for audit purposes.,Non-Functional
+The system shall allow users to send a direct message to another user.,Functional
+The system shall provide response times under 500 milliseconds for search queries.,Non-Functional
+The system shall calculate an employee's monthly payroll based on hours worked.,Functional
+The system shall allow users to download their transaction history as a PDF.,Functional
+The system shall allow citizens to submit a complaint to the municipal office.,Functional
+The system shall respond to user requests within two seconds under normal load.,Non-Functional
+The system shall be scalable enough to support future expansion into new markets.,Non-Functional
+The system shall allow drivers to update the delivery status of a package.,Functional
+The system shall allow customers to dispute a transaction within thirty days.,Functional
+The system shall allow a technician to remotely restart a connected device.,Functional
+The system shall log every sensor reading with a timestamp.,Functional
+The system shall support real-time monitoring of system health metrics.,Non-Functional
+The system shall maintain 99.5% uptime on a monthly basis.,Non-Functional
+The system shall allow students to view their current semester schedule.,Functional
+The system shall allow patients to request a refill of an existing prescription.,Functional
+The system shall allow managers to approve or reject a leave request.,Functional
+The system shall lock a user account after five consecutive failed login attempts.,Functional
+The system shall provide a consistent user interface across desktop and mobile platforms.,Non-Functional
+The system shall trigger an alert when a device goes offline unexpectedly.,Functional
+The system shall allow customers to view their current account balance.,Functional
+The system shall allow customers to set up a recurring bill payment.,Functional
+The system shall notify a customer when a transaction exceeds a specified amount.,Functional
+The system shall enforce password complexity requirements for all user accounts.,Non-Functional
+The system shall handle peak traffic loads during promotional sales events.,Non-Functional
+The system shall allow administrators to update product prices.,Functional
+The system shall provide adequate documentation for developers integrating with its API.,Non-Functional
+The system shall allow customers to transfer funds between their own accounts.,Functional
+The system shall allow users to mute notifications from a specific conversation.,Functional
+The system shall notify administrators when product stock falls below a threshold.,Functional
+The system shall retain audit logs for a minimum of one year.,Non-Functional
+The system shall allow employees to submit an expense reimbursement claim.,Functional
+The system shall be accessible to users with visual impairments in accordance with WCAG 2.1.,Non-Functional
+The system shall be available 99.9% of the time excluding scheduled maintenance.,Non-Functional
+The system shall allow students to withdraw from a course before the deadline.,Functional
+The system shall recover from a failure within fifteen minutes.,Non-Functional
+The system shall send an appointment reminder to the patient via SMS.,Functional
+The system shall be compatible with the latest versions of major web browsers.,Non-Functional
+The system shall allow a bank teller to open a new savings account for a customer.,Functional
+The system shall be reasonably priced to operate within the allocated infrastructure budget.,Non-Functional
+The system shall be compliant with HIPAA regulations for handling medical data.,Non-Functional
+The system shall allow doctors to issue a digital prescription to a patient.,Functional
+The system shall allow nurses to record a patient's vital signs.,Functional
+The system shall calculate shipping cost based on delivery address and package weight.,Functional
+The system shall allow users to update their email address after verification.,Functional
+The system shall send a verification link to a new user's email upon registration.,Functional
+The system shall allow customers to request a refund for a returned item.,Functional
+The system shall maintain an acceptable level of performance during database migrations.,Non-Functional
+The system shall display related products on a product detail page.,Functional
+The system shall allow pharmacists to verify a prescription before dispensing medication.,Functional
+The system shall allow a lab technician to upload test results to a patient's record.,Functional
+The system shall allow instructors to take attendance during a class session.,Functional
+The system shall allow administrators to deactivate a user account.,Functional
+The system shall allow administrators to generate quarterly financial reports.,Functional
+The system shall enable managers to reschedule an existing appointment.,Functional
+The software shall scale horizontally to handle increased traffic during peak periods.,Non-Functional
+The system shall be accessible to users with disabilities in accordance with WCAG 2.1 guidelines.,Non-Functional
+The portal must allow users to close a resolved support ticket.,Functional
+The software shall enable guests to change their account password.,Functional
+The service shall support automatic failover to a backup server in case of outage.,Non-Functional
+The application shall session-timeout inactive users after 1000 minutes of inactivity.,Non-Functional
+The software should allow supervisors to upload documents for verification.,Functional
+The service shall permit supervisors to upload a profile picture.,Functional
+The portal shall ensure data consistency across distributed servers.,Non-Functional
+The software shall provide clear error messages when an operation fails.,Non-Functional
+The portal shall provide role-based dashboards tailored to each user type.,Non-Functional
+The application must allow supervisors to receive a notification when a task is assigned.,Functional
+The mobile app shall be accessible to users with disabilities in accordance with WCAG 2.1 guidelines.,Non-Functional
+The system shall scale horizontally to handle increased traffic during peak periods.,Non-Functional
+The system shall enable agents to delete a vehicles from the catalog.,Functional
+The portal should allow users to update their profile information.,Functional
+The platform shall handle at least 60 transactions per second during peak load.,Non-Functional
+The platform should allow agents to cancel a scheduled appointment.,Functional
+The platform shall be deployable on both Windows and Linux operating systems.,Non-Functional
+The portal shall be compatible with the latest versions of major web browsers.,Non-Functional
+The system should allow supervisors to create a new project.,Functional
+The website shall generate audit logs for all administrative actions.,Non-Functional
+The software shall notify administrators immediately in case of a security breach.,Non-Functional
+The software shall enable sellers to reschedule an existing appointment.,Functional
+The mobile app shall session-timeout inactive users after 24 minutes of inactivity.,Non-Functional
+The website shall be accessible to users with disabilities in accordance with WCAG 2.1 guidelines.,Non-Functional
+The mobile app should allow supervisors to place an order for selected medicines.,Functional
+The website shall provide a mobile-responsive interface for all core features.,Non-Functional
+The platform shall allow operators to leave a review for a purchased tickets.,Functional
+The service must allow doctors to log out of the session securely.,Functional
+The mobile app shall enable managers to apply a discount coupon at checkout.,Functional
+The system shall restrict access to administrative functions based on user roles.,Non-Functional
+The service shall support at least 50 concurrent users without performance degradation.,Non-Functional
+The portal shall be accessible to users with disabilities in accordance with WCAG 2.1 guidelines.,Non-Functional
+The website shall allow employees to receive a notification when an order is shipped.,Functional
+The service must allow agents to add a new patients to the inventory.,Functional
+The mobile app must allow employees to chat with a support agent in real time.,Functional
+The portal shall permit supervisors to compare two or more reports.,Functional
+"The platform shall be maintainable with well-documented, modular source code.",Non-Functional
+The platform shall permit patients to generate a monthly summary report.,Functional
+The application should allow buyers to close a resolved support ticket.,Functional
+The platform shall notify administrators immediately in case of a security breach.,Non-Functional
+The software shall retain user data for a minimum of 1000 years for compliance purposes.,Non-Functional
+The service shall allow buyers to generate an invoice after purchase.,Functional
+The application shall allow patients to import data from an Excel file.,Functional
+The system shall encrypt all sensitive data using industry-standard encryption algorithms.,Non-Functional
+The application shall enforce password complexity requirements for all user accounts.,Non-Functional
+The mobile app shall be compatible with the latest versions of major web browsers.,Non-Functional
+The application shall encrypt all sensitive data using industry-standard encryption algorithms.,Non-Functional
+The website shall support seamless integration with third-party payment gateways.,Non-Functional
+The service shall permit sellers to unsubscribe from email notifications.,Functional
+The software shall enable supervisors to add multiple items to a wishlist.,Functional
+The website shall be deployable on both Windows and Linux operating systems.,Non-Functional
+The service shall enforce password complexity requirements for all user accounts.,Non-Functional
+The software shall log all failed login attempts for security auditing purposes.,Non-Functional
+The website should allow patients to make a payment using a digital wallet.,Functional
+The application shall retain user data for a minimum of 10 years for compliance purposes.,Non-Functional
+The mobile app shall enable buyers to update the quantity of a invoices in stock.,Functional
+The mobile app should allow auditors to reschedule an existing appointment.,Functional
+The platform shall comply with GDPR data protection regulations.,Non-Functional
+The software shall be accessible to users with disabilities in accordance with WCAG 2.1 guidelines.,Non-Functional
+The software should allow buyers to deactivate their account.,Functional
+The mobile app shall session-timeout inactive users after 60 minutes of inactivity.,Non-Functional
+The service shall generate audit logs for all administrative actions.,Non-Functional
+The software shall retain user data for a minimum of 99 years for compliance purposes.,Non-Functional
+The system shall be deployable on both Windows and Linux operating systems.,Non-Functional
+The software shall limit file upload size to 5 MB to prevent abuse.,Non-Functional
+The website shall handle at least 10 transactions per second during peak load.,Non-Functional
+The software shall restrict access to administrative functions based on user roles.,Non-Functional
+The website shall allow customers to sort patients by price.,Functional
+The platform shall log all failed login attempts for security auditing purposes.,Non-Functional
+The platform must allow operators to submit feedback about the application.,Functional
+The service must allow supervisors to chat with a support agent in real time.,Functional
+The application must allow sellers to view real-time notifications.,Functional
+The service shall handle at least 1000 transactions per second during peak load.,Non-Functional
+The application shall restrict access to administrative functions based on user roles.,Non-Functional
+The service shall scale horizontally to handle increased traffic during peak periods.,Non-Functional
+"The portal shall be available 1000% of the time, excluding scheduled maintenance.",Non-Functional
+The platform shall provide role-based dashboards tailored to each user type.,Non-Functional
+The application shall support automatic failover to a backup server in case of outage.,Non-Functional
+The system shall log all failed login attempts for security auditing purposes.,Non-Functional
+The portal shall mask sensitive information such as passwords and card numbers in the UI.,Non-Functional
+The website shall enable patients to delete a products from the catalog.,Functional
+The service should allow supervisors to cancel a scheduled appointment.,Functional
+The service shall limit file upload size to 1000 MB to prevent abuse.,Non-Functional
+The application shall permit administrators to sort courses by price.,Functional
+The platform shall support at least 200 concurrent users without performance degradation.,Non-Functional
+The portal shall support seamless integration with third-party payment gateways.,Non-Functional
+The mobile app shall automatically back up data every 99.9 hours.,Non-Functional
+The service shall retain user data for a minimum of 30 years for compliance purposes.,Non-Functional
+The application shall generate audit logs for all administrative actions.,Non-Functional
+The mobile app must allow doctors to submit a support ticket.,Functional
+The software shall automatically back up data every 200 hours.,Non-Functional
+The portal shall allow agents to download a generated report.,Functional
+The application shall log all failed login attempts for security auditing purposes.,Non-Functional
+The portal shall enable users to log out of the session securely.,Functional
+The portal shall recover from a system failure within 500 minutes.,Non-Functional
+The application must allow managers to verify their email address via a confirmation link.,Functional
+The system shall mask sensitive information such as passwords and card numbers in the UI.,Non-Functional
+The application shall provide clear error messages when an operation fails.,Non-Functional
+The application should allow students to submit a support ticket.,Functional
+The software shall encrypt all sensitive data using industry-standard encryption algorithms.,Non-Functional
+The website shall automatically back up data every 99.9 hours.,Non-Functional
+The portal shall be deployable on both Windows and Linux operating systems.,Non-Functional
+The mobile app shall permit sellers to sort rooms by price.,Functional
+The mobile app shall enable auditors to customize the dashboard layout.,Functional
+The website shall scale horizontally to handle increased traffic during peak periods.,Non-Functional
+The platform shall be compatible with the latest versions of major web browsers.,Non-Functional
+The portal shall retain user data for a minimum of 30 years for compliance purposes.,Non-Functional
+The application shall provide a mobile-responsive interface for all core features.,Non-Functional
+The portal must allow auditors to leave a review for a purchased books.,Functional
+The website shall encrypt all sensitive data using industry-standard encryption algorithms.,Non-Functional
+The application shall enable students to verify their email address via a confirmation link.,Functional
+The portal shall permit doctors to revoke access permissions from a user.,Functional
+The system shall enable sellers to update the quantity of a products in stock.,Functional
+The system shall enable students to add multiple items to a wishlist.,Functional
+The website shall support at least 200 concurrent users without performance degradation.,Non-Functional
+The portal shall session-timeout inactive users after 100 minutes of inactivity.,Non-Functional
+The platform should allow doctors to deactivate their account.,Functional
+The portal shall allow supervisors to apply a discount coupon at checkout.,Functional
+The portal shall permit agents to export data in CSV format.,Functional
+The platform shall support seamless integration with third-party payment gateways.,Non-Functional
+The service shall log all failed login attempts for security auditing purposes.,Non-Functional
+The website shall mask sensitive information such as passwords and card numbers in the UI.,Non-Functional
+The mobile app shall support at least 50 concurrent users without performance degradation.,Non-Functional
+The mobile app shall allow customers to revoke access permissions from a guest.,Functional
+The software shall mask sensitive information such as passwords and card numbers in the UI.,Non-Functional
+The mobile app shall automatically back up data every 24 hours.,Non-Functional
+The platform shall allow users to mark a task as completed.,Functional
+The application shall enable sellers to book a slot for a courses.,Functional
+"The system shall be maintainable with well-documented, modular source code.",Non-Functional
+The mobile app shall support seamless integration with third-party payment gateways.,Non-Functional
+The mobile app shall enable students to place an order for selected vehicles.,Functional
+The website shall session-timeout inactive users after 500 minutes of inactivity.,Non-Functional
+The software shall permit customers to make a payment using a digital wallet.,Functional
+"The portal shall be available 10% of the time, excluding scheduled maintenance.",Non-Functional
+The portal shall handle at least 60 transactions per second during peak load.,Non-Functional
+The software shall be deployable on both Windows and Linux operating systems.,Non-Functional
+The service shall provide role-based dashboards tailored to each user type.,Non-Functional
+The software shall allow administrators to add a new patients to the inventory.,Functional
+The software must allow patients to book a slot for a vehicles.,Functional
+The application must allow agents to add patients to the shopping cart.,Functional
+The portal should allow auditors to mark a task as completed.,Functional
+The application shall permit operators to make a payment using a digital wallet.,Functional
+The portal must allow agents to track the status of an order.,Functional
+The application shall respond to user requests within 60 seconds under normal load.,Non-Functional
+The website shall allow doctors to register using their email address and password.,Functional
+The system shall session-timeout inactive users after 30 minutes of inactivity.,Non-Functional
+The application should allow patients to add medicines to the shopping cart.,Functional
+The application must allow supervisors to view the terms and conditions before registering.,Functional
+The website shall allow guests to search for courses using keywords.,Functional
+The platform must allow students to view frequently asked questions.,Functional
+The application shall respond to user requests within 30 seconds under normal load.,Non-Functional
+The application shall allow guests to track the status of an order.,Functional
+The system shall automatically back up data every 5 hours.,Non-Functional
+The application shall ensure data consistency across distributed servers.,Non-Functional
+The portal shall permit operators to download a generated report.,Functional
+The mobile app shall be deployable on both Windows and Linux operating systems.,Non-Functional
+The portal shall permit patients to make a payment using a credit card.,Functional
+The system shall support internationalization for at least 99 languages.,Non-Functional
+The mobile app shall recover from a system failure within 99.9 minutes.,Non-Functional
+The platform must allow operators to view frequently asked questions.,Functional
+The application shall be accessible to users with disabilities in accordance with WCAG 2.1 guidelines.,Non-Functional
+The platform should allow employees to remove tickets from the shopping cart.,Functional
+The software shall support at least 500 concurrent users without performance degradation.,Non-Functional
+The application shall support at least 30 concurrent users without performance degradation.,Non-Functional
+The mobile app should allow agents to close a resolved support ticket.,Functional
+The application must allow auditors to verify their email address via a confirmation link.,Functional
+The system must allow guests to share a patients on social media.,Functional
+The mobile app must allow operators to view a dashboard with key metrics.,Functional
+The platform shall generate audit logs for all administrative actions.,Non-Functional
+The service shall permit patients to grant role-based access to a patient.,Functional
+The application shall be compatible with the latest versions of major web browsers.,Non-Functional
+The service shall limit file upload size to 99 MB to prevent abuse.,Non-Functional
+The system shall permit agents to deactivate their account.,Functional
+The software shall enable customers to search for courses using keywords.,Functional
+The service shall automatically back up data every 90 hours.,Non-Functional
+The system shall allow buyers to upload documents for verification.,Functional
+The portal shall scale horizontally to handle increased traffic during peak periods.,Non-Functional
+The service shall permit buyers to share a services on social media.,Functional
+The website shall provide clear error messages when an operation fails.,Non-Functional
+The website shall be compatible with the latest versions of major web browsers.,Non-Functional
+"The software shall be available 500% of the time, excluding scheduled maintenance.",Non-Functional
+The software shall enable customers to customize the dashboard layout.,Functional
+The software shall enable customers to enable two-factor authentication.,Functional
+The system must allow buyers to verify their email address via a confirmation link.,Functional
+The application shall notify administrators immediately in case of a security breach.,Non-Functional
+The portal should allow operators to grant role-based access to a auditor.,Functional
+The platform shall scale horizontally to handle increased traffic during peak periods.,Non-Functional
+The platform shall restrict access to administrative functions based on user roles.,Non-Functional
+"The mobile app shall be maintainable with well-documented, modular source code.",Non-Functional
+The application shall session-timeout inactive users after 50 minutes of inactivity.,Non-Functional
+The portal shall support internationalization for at least 500 languages.,Non-Functional
+The service shall restrict access to administrative functions based on user roles.,Non-Functional
+The application shall enable buyers to chat with a support agent in real time.,Functional
+The platform shall permit patients to share a patients on social media.,Functional
+The mobile app shall support internationalization for at least 2 languages.,Non-Functional
+The software shall provide role-based dashboards tailored to each user type.,Non-Functional
+The software shall recover from a system failure within 24 minutes.,Non-Functional
+The service must allow students to view real-time notifications.,Functional
+The application shall permit employees to delete a invoices from the catalog.,Functional
+The service shall recover from a system failure within 99 minutes.,Non-Functional
+The platform shall session-timeout inactive users after 3 minutes of inactivity.,Non-Functional
+The software shall enable sellers to print a receipt after payment.,Functional
+The portal shall allow auditors to cancel a scheduled appointment.,Functional
+The software shall enable administrators to add comments to a task.,Functional
+The service shall ensure data consistency across distributed servers.,Non-Functional
+The portal shall handle at least 100 transactions per second during peak load.,Non-Functional
+The portal shall allow auditors to submit a support ticket.,Functional
+The platform shall limit file upload size to 90 MB to prevent abuse.,Non-Functional
+The service must allow employees to search for books using keywords.,Functional
+The application shall support seamless integration with third-party payment gateways.,Non-Functional
+The system shall limit file upload size to 1000 MB to prevent abuse.,Non-Functional
+The mobile app shall log all failed login attempts for security auditing purposes.,Non-Functional
+The portal should allow patients to reschedule an existing appointment.,Functional
+The software should allow auditors to register using their email address and password.,Functional
+The application shall permit sellers to log in using valid credentials.,Functional
+The website shall support automatic failover to a backup server in case of outage.,Non-Functional
+The website shall ensure data consistency across distributed servers.,Non-Functional
+The website shall enforce password complexity requirements for all user accounts.,Non-Functional
+The mobile app shall recover from a system failure within 100 minutes.,Non-Functional
+The service shall automatically back up data every 50 hours.,Non-Functional
+The platform shall be accessible to users with disabilities in accordance with WCAG 2.1 guidelines.,Non-Functional
+The portal shall restrict access to administrative functions based on user roles.,Non-Functional
+The system should allow sellers to apply a discount coupon at checkout.,Functional
+The portal must allow doctors to grant role-based access to a customer.,Functional
+The portal shall support internationalization for at least 30 languages.,Non-Functional
+The application should allow guests to send a message to another manager.,Functional
+The system shall support internationalization for at least 60 languages.,Non-Functional
+The mobile app shall provide clear error messages when an operation fails.,Non-Functional
+The mobile app shall allow administrators to import data from an Excel file.,Functional
+The platform shall permit patients to unsubscribe from email notifications.,Functional
+The mobile app should allow managers to close a resolved support ticket.,Functional
+The website should allow doctors to reset their password via email verification.,Functional
+The mobile app shall enable patients to log out of the session securely.,Functional
+The service shall permit doctors to leave a review for a purchased courses.,Functional
+The website shall recover from a system failure within 90 minutes.,Non-Functional
+The system shall enable administrators to generate a monthly summary report.,Functional
+The portal shall allow agents to search for services using keywords.,Functional
+The portal shall enable guests to submit feedback about the system.,Functional
+The platform shall mask sensitive information such as passwords and card numbers in the UI.,Non-Functional
+The service shall allow doctors to make a payment using a credit card.,Functional
+The website shall provide role-based dashboards tailored to each user type.,Non-Functional
+The application should allow buyers to cancel an existing order.,Functional
+The system shall session-timeout inactive users after 5 minutes of inactivity.,Non-Functional
+The system shall handle at least 30 transactions per second during peak load.,Non-Functional
+The software shall limit file upload size to 1000 MB to prevent abuse.,Non-Functional
+The website shall allow patients to register using their email address and password.,Functional
+The system shall allow buyers to cancel a scheduled appointment.,Functional
+The system shall enable administrators to upload documents for verification.,Functional
+The system shall allow operators to close a resolved support ticket.,Functional
+The platform shall allow customers to verify their email address via a confirmation link.,Functional
+The application shall maintain 99.9% uptime as measured on a monthly basis.,Non-Functional
+The system should allow administrators to view a dashboard with key metrics.,Functional
+The mobile app shall allow buyers to track the status of an order.,Functional
+The application shall enable customers to register using their email address and password.,Functional
+The platform shall permit operators to track the status of an order.,Functional
+The application shall enable operators to revoke access permissions from a doctor.,Functional
+The system shall retain user data for a minimum of 60 years for compliance purposes.,Non-Functional
+The application shall allow patients to view the terms and conditions before registering.,Functional
+The service shall provide clear error messages when an operation fails.,Non-Functional
+The platform shall encrypt all sensitive data using industry-standard encryption algorithms.,Non-Functional
+The software shall automatically back up data every 2 hours.,Non-Functional
+The website shall allow students to enable two-factor authentication.,Functional
+The service shall mask sensitive information such as passwords and card numbers in the UI.,Non-Functional
+The application shall be deployable on both Windows and Linux operating systems.,Non-Functional
+The platform shall allow buyers to add comments to a task.,Functional
+The system shall automatically back up data every 90 hours.,Non-Functional
+The mobile app shall restrict access to administrative functions based on user roles.,Non-Functional
+The service shall allow managers to make a payment using a credit card.,Functional
+The mobile app shall permit students to customize the dashboard layout.,Functional
+The service shall retain user data for a minimum of 5 years for compliance purposes.,Non-Functional
+The platform shall support automatic failover to a backup server in case of outage.,Non-Functional
+The portal shall enable doctors to view frequently asked questions.,Functional
+The platform shall provide clear error messages when an operation fails.,Non-Functional
+The website shall limit file upload size to 1000 MB to prevent abuse.,Non-Functional
+The software shall respond to user requests within 500 seconds under normal load.,Non-Functional
+The system shall ensure data consistency across distributed servers.,Non-Functional
+The software should allow administrators to customize the dashboard layout.,Functional
+The system shall handle at least 99.9 transactions per second during peak load.,Non-Functional
+The software shall permit customers to filter orders by category.,Functional
+The website shall comply with GDPR data protection regulations.,Non-Functional
+The portal shall notify administrators immediately in case of a security breach.,Non-Functional
+The portal must allow customers to submit feedback about the system.,Functional
+The application shall allow administrators to view order history.,Functional
+The system shall provide role-based dashboards tailored to each user type.,Non-Functional
+The service shall support at least 60 concurrent users without performance degradation.,Non-Functional
+The software shall respond to user requests within 60 seconds under normal load.,Non-Functional
+The service must allow operators to import data from an Excel file.,Functional
+The mobile app shall enable managers to book a slot for a vehicles.,Functional
+The website shall allow administrators to change their account password.,Functional
+The website must allow managers to log out of the session securely.,Functional
+The system must allow employees to apply a discount coupon at checkout.,Functional
+The portal must allow supervisors to verify their email address via a confirmation link.,Functional
+The application must allow doctors to upload a profile picture.,Functional
+The system shall provide a mobile-responsive interface for all core features.,Non-Functional
+The software should allow users to change their account password.,Functional
+The application shall permit auditors to apply a discount coupon at checkout.,Functional
+The service shall enable users to download a generated report.,Functional
+The platform must allow students to generate a monthly summary report.,Functional
+The website should allow auditors to enable two-factor authentication.,Functional
+The platform shall permit sellers to revoke access permissions from a patient.,Functional
+The service shall be compatible with the latest versions of major web browsers.,Non-Functional
+The service shall allow customers to view order history.,Functional
+The software should allow guests to add courses to the shopping cart.,Functional
+The website shall restrict access to administrative functions based on user roles.,Non-Functional
+The system shall enable buyers to attach files to a support ticket.,Functional
+The service shall permit customers to leave a review for a purchased appointments.,Functional
+The service shall limit file upload size to 500 MB to prevent abuse.,Non-Functional
+The software shall ensure data consistency across distributed servers.,Non-Functional
+The software should allow auditors to book a slot for a books.,Functional
+The portal shall enforce password complexity requirements for all user accounts.,Non-Functional
+The mobile app must allow customers to deactivate their account.,Functional
+The application should allow patients to customize the dashboard layout.,Functional
+The portal shall permit doctors to receive a notification when a deadline is approaching.,Functional
+The system should allow agents to generate an invoice after purchase.,Functional
+The portal shall permit employees to view the terms and conditions before registering.,Functional
+The service shall allow supervisors to track the status of an order.,Functional
+The mobile app shall limit file upload size to 30 MB to prevent abuse.,Non-Functional
+The mobile app shall limit file upload size to 200 MB to prevent abuse.,Non-Functional
+The mobile app shall scale horizontally to handle increased traffic during peak periods.,Non-Functional
+The software shall handle at least 2 transactions per second during peak load.,Non-Functional
+The platform shall retain user data for a minimum of 1000 years for compliance purposes.,Non-Functional
+The portal shall session-timeout inactive users after 99 minutes of inactivity.,Non-Functional
+The service shall recover from a system failure within 24 minutes.,Non-Functional
+The website shall permit auditors to receive a notification when a message is received.,Functional
+"The service shall be maintainable with well-documented, modular source code.",Non-Functional
+The platform shall support internationalization for at least 30 languages.,Non-Functional
+The portal shall allow agents to log out of the session securely.,Functional
+The website shall support at least 60 concurrent users without performance degradation.,Non-Functional
+The system shall enable employees to register using their email address and password.,Functional
+The mobile app shall permit guests to update the quantity of a patients in stock.,Functional
+The application shall respond to user requests within 100 seconds under normal load.,Non-Functional
+The system must allow operators to send a message to another patient.,Functional
+The service shall be deployable on both Windows and Linux operating systems.,Non-Functional
+The system shall maintain 99.9% uptime as measured on a monthly basis.,Non-Functional
+The mobile app shall provide role-based dashboards tailored to each user type.,Non-Functional
+The portal shall permit managers to generate an invoice after purchase.,Functional
+The application shall enable agents to reset their password via email verification.,Functional
+The software shall handle at least 90 transactions per second during peak load.,Non-Functional
+The application shall permit managers to restore a previously deactivated account.,Functional
+The software shall permit patients to update the quantity of a courses in stock.,Functional
+The portal shall comply with GDPR data protection regulations.,Non-Functional
+The software shall enable patients to receive a notification when a message is received.,Functional
+The application shall permit sellers to enable two-factor authentication.,Functional
+The application shall comply with GDPR data protection regulations.,Non-Functional
+"The software shall be available 2% of the time, excluding scheduled maintenance.",Non-Functional
+The platform shall support at least 100 concurrent users without performance degradation.,Non-Functional
+The software must allow employees to leave a review for a purchased students.,Functional
+The website shall support internationalization for at least 99.9 languages.,Non-Functional
+The mobile app must allow agents to rate a records on a scale of 1 to 5.,Functional
+The service shall handle at least 10 transactions per second during peak load.,Non-Functional
+The software shall provide a mobile-responsive interface for all core features.,Non-Functional
+The mobile app shall support automatic failover to a backup server in case of outage.,Non-Functional
+The system shall enable sellers to attach files to a support ticket.,Functional
+The application shall allow administrators to print a receipt after payment.,Functional
+The system shall respond to user requests within 5 seconds under normal load.,Non-Functional
+The system shall session-timeout inactive users after 500 minutes of inactivity.,Non-Functional
+The system should allow students to update their profile information.,Functional
+The software should allow customers to reset their password via email verification.,Functional
+The mobile app must allow guests to attach files to a support ticket.,Functional
+The application shall permit students to search for files using keywords.,Functional
+The application shall permit users to delete a medicines from the catalog.,Functional
+The portal shall maintain 99.9% uptime as measured on a monthly basis.,Non-Functional
+The mobile app shall encrypt all sensitive data using industry-standard encryption algorithms.,Non-Functional
+The mobile app shall comply with GDPR data protection regulations.,Non-Functional
+The system shall provide clear error messages when an operation fails.,Non-Functional
+The service shall support at least 5 concurrent users without performance degradation.,Non-Functional
+The mobile app shall permit administrators to view real-time notifications.,Functional
+The service shall permit employees to generate a monthly summary report.,Functional
+The portal shall log all failed login attempts for security auditing purposes.,Non-Functional
+The mobile app shall automatically back up data every 5 hours.,Non-Functional
+The portal shall allow agents to subscribe to a newsletter.,Functional
+The website shall permit sellers to submit feedback about the system.,Functional
+The system should allow customers to view a dashboard with key metrics.,Functional
+The platform shall enable guests to view frequently asked questions.,Functional
+The mobile app shall support internationalization for at least 30 languages.,Non-Functional
+The portal shall allow doctors to restore a previously deactivated account.,Functional
+The system shall allow managers to grant role-based access to a guest.,Functional
+The platform shall permit managers to change their account password.,Functional
+The software shall allow managers to make a payment using a digital wallet.,Functional
+The mobile app shall allow guests to mark a task as completed.,Functional
+The service shall enable doctors to share a files on social media.,Functional
+The application should allow customers to share a files on social media.,Functional
+The service must allow guests to leave a review for a purchased courses.,Functional
+The platform shall enable users to print a receipt after payment.,Functional
+The system shall permit users to deactivate their account.,Functional
+The portal shall limit file upload size to 99.9 MB to prevent abuse.,Non-Functional
+The mobile app shall support internationalization for at least 5 languages.,Non-Functional
+The application shall scale horizontally to handle increased traffic during peak periods.,Non-Functional
+The website shall permit managers to place an order for selected vehicles.,Functional
+The application shall allow employees to share a files on social media.,Functional
+The platform shall enable supervisors to view real-time notifications.,Functional
+The application shall automatically back up data every 99 hours.,Non-Functional
+The platform shall provide a mobile-responsive interface for all core features.,Non-Functional
+The website shall permit operators to cancel an existing order.,Functional
+The portal shall encrypt all sensitive data using industry-standard encryption algorithms.,Non-Functional
+The system shall allow students to apply a discount coupon at checkout.,Functional
+The mobile app shall allow buyers to filter files by category.,Functional
+The service must allow supervisors to delete a students from the catalog.,Functional
+The service must allow supervisors to download a generated report.,Functional
+The mobile app shall handle at least 10 transactions per second during peak load.,Non-Functional
+The service must allow auditors to export data in CSV format.,Functional
+The platform shall permit supervisors to import data from an Excel file.,Functional
+The platform shall enable students to upload documents for verification.,Functional
+The service shall enable auditors to compare two or more records.,Functional
+The portal shall retain user data for a minimum of 2 years for compliance purposes.,Non-Functional
+The platform shall permit auditors to view a dashboard with key metrics.,Functional
+The platform shall support at least 50 concurrent users without performance degradation.,Non-Functional
+The application shall limit file upload size to 2 MB to prevent abuse.,Non-Functional
+The website should allow auditors to add multiple items to a wishlist.,Functional
+The portal must allow sellers to make a payment using a digital wallet.,Functional
+The software shall allow customers to unsubscribe from email notifications.,Functional
+The service shall respond to user requests within 1000 seconds under normal load.,Non-Functional
+The platform shall retain user data for a minimum of 500 years for compliance purposes.,Non-Functional
+The software shall maintain 99.9% uptime as measured on a monthly basis.,Non-Functional
+The portal shall generate audit logs for all administrative actions.,Non-Functional
+The service shall enable guests to deactivate their account.,Functional
+The mobile app should allow students to add records to the shopping cart.,Functional
+The software shall permit administrators to upload a profile picture.,Functional
+The software should allow users to filter patients by category.,Functional
+The platform must allow agents to mark a task as completed.,Functional
+The application shall permit sellers to filter appointments by category.,Functional
+The mobile app shall permit sellers to place an order for selected medicines.,Functional
+The application shall limit file upload size to 90 MB to prevent abuse.,Non-Functional
+The website shall notify administrators immediately in case of a security breach.,Non-Functional
+The system shall generate audit logs for all administrative actions.,Non-Functional
+The application should allow auditors to cancel an existing order.,Functional
+The service should allow patients to view a dashboard with key metrics.,Functional
+The mobile app must allow customers to print a receipt after payment.,Functional
+The platform shall support internationalization for at least 50 languages.,Non-Functional
+The software shall recover from a system failure within 50 minutes.,Non-Functional
+The mobile app should allow operators to attach files to a support ticket.,Functional
+The portal should allow buyers to enable two-factor authentication.,Functional
+The software shall permit managers to share a vehicles on social media.,Functional
+The software shall handle at least 100 transactions per second during peak load.,Non-Functional
+The portal shall session-timeout inactive users after 30 minutes of inactivity.,Non-Functional
+The service shall enable doctors to update the quantity of a courses in stock.,Functional
+The application shall permit sellers to assign a task to a auditor.,Functional
+The application shall provide role-based dashboards tailored to each user type.,Non-Functional
+The platform should allow sellers to view order history.,Functional
+The mobile app shall support internationalization for at least 99 languages.,Non-Functional
+The service shall session-timeout inactive users after 30 minutes of inactivity.,Non-Functional
+The mobile app shall generate audit logs for all administrative actions.,Non-Functional
+The software shall limit file upload size to 10 MB to prevent abuse.,Non-Functional
+The website shall permit doctors to chat with a support agent in real time.,Functional
+The service shall retain user data for a minimum of 99.9 years for compliance purposes.,Non-Functional
+The service shall enable agents to submit feedback about the application.,Functional
+The application must allow administrators to send a message to another student.,Functional
+The mobile app shall support at least 90 concurrent users without performance degradation.,Non-Functional
+The platform must allow operators to update the quantity of a books in stock.,Functional
+The portal shall enable auditors to send a message to another patient.,Functional
+The service shall automatically back up data every 60 hours.,Non-Functional
+The application shall session-timeout inactive users after 30 minutes of inactivity.,Non-Functional
+The service must allow students to print a receipt after payment.,Functional
+The portal shall automatically back up data every 5 hours.,Non-Functional
+The service shall retain user data for a minimum of 24 years for compliance purposes.,Non-Functional
+The portal shall provide a mobile-responsive interface for all core features.,Non-Functional
+The platform must allow doctors to add products to the shopping cart.,Functional
+The service shall respond to user requests within 5 seconds under normal load.,Non-Functional
+The system shall retain user data for a minimum of 10 years for compliance purposes.,Non-Functional
+The software must allow agents to submit a support ticket.,Functional
+The system shall handle at least 5 transactions per second during peak load.,Non-Functional
+The mobile app shall handle at least 100 transactions per second during peak load.,Non-Functional
+The service should allow users to leave a review for a purchased orders.,Functional
+The application shall mask sensitive information such as passwords and card numbers in the UI.,Non-Functional
+"The portal shall be maintainable with well-documented, modular source code.",Non-Functional
+The mobile app shall permit sellers to add vehicles to the shopping cart.,Functional
+The software shall enable customers to cancel a scheduled appointment.,Functional
+The application shall handle at least 99 transactions per second during peak load.,Non-Functional
+The service should allow managers to customize the dashboard layout.,Functional
+The service shall provide a mobile-responsive interface for all core features.,Non-Functional
+The platform should allow auditors to add records to the shopping cart.,Functional
+The application shall recover from a system failure within 60 minutes.,Non-Functional
+The application shall support internationalization for at least 1000 languages.,Non-Functional
+The system shall support seamless integration with third-party payment gateways.,Non-Functional
+The mobile app shall handle at least 3 transactions per second during peak load.,Non-Functional
+The mobile app shall enable administrators to restore a previously deactivated account.,Functional
+The website must allow agents to reschedule an existing appointment.,Functional
+The application must allow guests to revoke access permissions from a customer.,Functional
+The system shall support automatic failover to a backup server in case of outage.,Non-Functional
+The system should allow administrators to update their profile information.,Functional
+The application shall allow agents to update the quantity of a services in stock.,Functional
+The mobile app shall enable auditors to generate a monthly summary report.,Functional
+The application must allow customers to grant role-based access to a doctor.,Functional
+The service should allow managers to sort students by price.,Functional
+The application shall handle at least 90 transactions per second during peak load.,Non-Functional
+The website shall permit students to mark a task as completed.,Functional
+The software shall recover from a system failure within 10 minutes.,Non-Functional
+The mobile app shall recover from a system failure within 24 minutes.,Non-Functional
+The software must allow supervisors to remove rooms from the shopping cart.,Functional
+The website shall permit employees to enable two-factor authentication.,Functional
+The website shall enable customers to assign a task to a customer.,Functional
+The application shall permit guests to view real-time notifications.,Functional
+"The application shall be maintainable with well-documented, modular source code.",Non-Functional
+The software should allow students to generate an invoice after purchase.,Functional
+"The platform shall be available 99% of the time, excluding scheduled maintenance.",Non-Functional
+The application shall enable sellers to generate an invoice after purchase.,Functional
+The software shall allow guests to add a new tickets to the inventory.,Functional
+"The website shall be maintainable with well-documented, modular source code.",Non-Functional
+The system shall allow administrators to make a payment using a credit card.,Functional
+The software shall enable administrators to reset their password via email verification.,Functional
+The software should allow supervisors to customize the dashboard layout.,Functional
+The software must allow users to add appointments to the shopping cart.,Functional
+The platform shall support internationalization for at least 10 languages.,Non-Functional
+The website shall permit customers to upload documents for verification.,Functional
+The service shall permit users to place an order for selected invoices.,Functional
+The service should allow supervisors to assign a task to a user.,Functional
+The mobile app must allow employees to upload documents for verification.,Functional
+The software shall session-timeout inactive users after 90 minutes of inactivity.,Non-Functional
+The website shall permit sellers to subscribe to a newsletter.,Functional
+The website shall permit employees to view frequently asked questions.,Functional
+The application shall allow sellers to change their account password.,Functional
+The software shall enable users to view order history.,Functional
+The platform shall enable agents to unsubscribe from email notifications.,Functional
+The platform shall enable doctors to print a receipt after payment.,Functional
+"The system shall be available 1000% of the time, excluding scheduled maintenance.",Non-Functional
+The application shall support at least 2 concurrent users without performance degradation.,Non-Functional
+The platform must allow guests to assign a task to a manager.,Functional
+The platform should allow employees to subscribe to a newsletter.,Functional
+The application shall allow patients to view real-time notifications.,Functional
+The software should allow operators to add courses to the shopping cart.,Functional
+The mobile app shall permit employees to make a payment using a digital wallet.,Functional
+The platform shall permit users to import data from an Excel file.,Functional
+The software shall enforce password complexity requirements for all user accounts.,Non-Functional
+The platform shall retain user data for a minimum of 100 years for compliance purposes.,Non-Functional
+The service shall support internationalization for at least 30 languages.,Non-Functional
+The platform should allow agents to schedule an appointment with a auditor.,Functional
+"The portal shall be available 90% of the time, excluding scheduled maintenance.",Non-Functional
+The system shall allow sellers to rate a books on a scale of 1 to 5.,Functional
+The system shall allow employees to export data in CSV format.,Functional
+The service should allow sellers to view a dashboard with key metrics.,Functional
+The portal shall support automatic failover to a backup server in case of outage.,Non-Functional
+The mobile app shall permit students to revoke access permissions from a customer.,Functional
+The service shall permit buyers to print a receipt after payment.,Functional
+The system shall automatically back up data every 100 hours.,Non-Functional
+The website shall respond to user requests within 5 seconds under normal load.,Non-Functional
+The service shall recover from a system failure within 3 minutes.,Non-Functional
+The mobile app should allow auditors to print a receipt after payment.,Functional
+The application shall allow operators to customize the dashboard layout.,Functional
+The software must allow users to unsubscribe from email notifications.,Functional
+The software shall allow buyers to reschedule an existing appointment.,Functional
+The website shall permit users to submit feedback about the mobile app.,Functional
+The mobile app shall permit patients to compare two or more records.,Functional
+The service shall recover from a system failure within 2 minutes.,Non-Functional
+The service shall permit agents to make a payment using a credit card.,Functional
+The application shall allow doctors to change their account password.,Functional
+The website shall support internationalization for at least 2 languages.,Non-Functional
+The mobile app shall allow agents to remove students from the shopping cart.,Functional
+The website shall permit buyers to rate a patients on a scale of 1 to 5.,Functional
+The mobile app shall ensure data consistency across distributed servers.,Non-Functional
+The portal should allow doctors to filter services by category.,Functional
+The portal shall allow operators to make a payment using a credit card.,Functional
+The portal shall limit file upload size to 100 MB to prevent abuse.,Non-Functional
+The service shall permit agents to reset application settings to default.,Functional
+The system shall notify administrators immediately in case of a security breach.,Non-Functional
+The system should allow operators to sort students by price.,Functional
+The website shall permit operators to view real-time notifications.,Functional
+The platform shall allow agents to upload documents for verification.,Functional
+The mobile app shall permit auditors to sort courses by price.,Functional
+The system shall retain user data for a minimum of 99.9 years for compliance purposes.,Non-Functional
+The portal shall enable students to delete a rooms from the catalog.,Functional
+The platform shall enable guests to rate a patients on a scale of 1 to 5.,Functional
+The portal should allow doctors to log in using valid credentials.,Functional
+The software shall handle at least 50 transactions per second during peak load.,Non-Functional
+The portal shall enable guests to place an order for selected books.,Functional
+The application shall recover from a system failure within 200 minutes.,Non-Functional
+The application shall retain user data for a minimum of 99.9 years for compliance purposes.,Non-Functional
+The mobile app shall allow supervisors to add a new reports to the inventory.,Functional
+The platform shall automatically back up data every 2 hours.,Non-Functional
+The software shall permit students to receive a notification when a payment is received.,Functional
+The software shall allow supervisors to rate a courses on a scale of 1 to 5.,Functional
+The application must allow sellers to grant role-based access to a buyer.,Functional
+The mobile app shall recover from a system failure within 2 minutes.,Non-Functional
+The website shall enable auditors to view frequently asked questions.,Functional
+The service must allow employees to attach files to a support ticket.,Functional
+The mobile app shall enable managers to submit feedback about the software.,Functional
+The application must allow users to submit a support ticket.,Functional
+The service should allow managers to reset their password via email verification.,Functional
+The mobile app must allow students to export data in CSV format.,Functional
+The application shall permit operators to view order history.,Functional
+The software shall automatically back up data every 3 hours.,Non-Functional
+The website should allow patients to place an order for selected invoices.,Functional
+The portal shall enable guests to create a new project.,Functional
+The portal shall retain user data for a minimum of 5 years for compliance purposes.,Non-Functional
+The platform shall enable users to assign a task to a employee.,Functional
+The website shall enable customers to add multiple items to a wishlist.,Functional
+The service shall allow guests to remove services from the shopping cart.,Functional
+The mobile app shall support at least 100 concurrent users without performance degradation.,Non-Functional
+The service must allow agents to receive a notification when an order is shipped.,Functional
+The software shall permit managers to cancel a scheduled appointment.,Functional
+The website shall permit operators to cancel a scheduled appointment.,Functional
+The service shall comply with GDPR data protection regulations.,Non-Functional
+The mobile app shall permit doctors to download a generated report.,Functional
+The application must allow auditors to create a new project.,Functional
+The mobile app shall maintain 99.9% uptime as measured on a monthly basis.,Non-Functional
+The website must allow patients to close a resolved support ticket.,Functional
+The system should allow users to add multiple items to a wishlist.,Functional
+The website shall permit sellers to import data from an Excel file.,Functional
+The service shall be accessible to users with disabilities in accordance with WCAG 2.1 guidelines.,Non-Functional
+The platform shall maintain 99.9% uptime as measured on a monthly basis.,Non-Functional
+The mobile app shall allow guests to update their profile information.,Functional
+"The website shall be available 90% of the time, excluding scheduled maintenance.",Non-Functional
+The service shall limit file upload size to 50 MB to prevent abuse.,Non-Functional
+The platform shall permit operators to change their account password.,Functional
+The platform shall allow administrators to make a payment using a digital wallet.,Functional
+The application shall permit patients to search for products using keywords.,Functional
+The service shall automatically back up data every 5 hours.,Non-Functional
+The mobile app shall enable agents to grant role-based access to a guest.,Functional
+The portal must allow doctors to add a new rooms to the inventory.,Functional
+The platform shall support at least 10 concurrent users without performance degradation.,Non-Functional
+The application shall permit agents to sort courses by price.,Functional
+The mobile app shall allow guests to add multiple items to a wishlist.,Functional
+The system shall allow employees to log in using valid credentials.,Functional
+The software shall recover from a system failure within 500 minutes.,Non-Functional
+The portal should allow patients to leave a review for a purchased books.,Functional
+The application shall permit operators to rate a tickets on a scale of 1 to 5.,Functional
+The service shall permit employees to verify their email address via a confirmation link.,Functional
+The system shall recover from a system failure within 1000 minutes.,Non-Functional
+The portal shall allow administrators to log out of the session securely.,Functional
+The application shall permit agents to view the terms and conditions before registering.,Functional
+The platform shall allow supervisors to leave a review for a purchased students.,Functional
+The software shall support at least 3 concurrent users without performance degradation.,Non-Functional
+The portal shall enable administrators to add multiple items to a wishlist.,Functional
+The application should allow agents to view frequently asked questions.,Functional
+The mobile app shall permit patients to chat with a support agent in real time.,Functional
+The service shall notify administrators immediately in case of a security breach.,Non-Functional
+The mobile app shall support internationalization for at least 3 languages.,Non-Functional
+The website shall respond to user requests within 200 seconds under normal load.,Non-Functional
+"The service shall be available 100% of the time, excluding scheduled maintenance.",Non-Functional
+The mobile app shall enable administrators to chat with a support agent in real time.,Functional
+The software shall allow administrators to mark a task as completed.,Functional
+The system must allow agents to view order history.,Functional
+The platform shall ensure data consistency across distributed servers.,Non-Functional
+The system shall enable customers to compare two or more vehicles.,Functional
+The mobile app should allow auditors to filter records by category.,Functional
+The software shall recover from a system failure within 5 minutes.,Non-Functional
+The website must allow doctors to apply a discount coupon at checkout.,Functional
+The service shall enable managers to deactivate their account.,Functional
+The mobile app shall enable doctors to cancel an existing order.,Functional
+The website shall enable students to log in using valid credentials.,Functional
+The mobile app shall allow patients to send a message to another doctor.,Functional
+The mobile app shall permit students to grant role-based access to a doctor.,Functional
+The portal should allow guests to upload a profile picture.,Functional
+The system shall enable students to deactivate their account.,Functional
+The portal shall enable auditors to assign a task to a employee.,Functional
+The application shall recover from a system failure within 500 minutes.,Non-Functional
+The platform shall support at least 1000 concurrent users without performance degradation.,Non-Functional
+The mobile app shall permit operators to share a courses on social media.,Functional
+The software shall generate audit logs for all administrative actions.,Non-Functional
+The website should allow doctors to view real-time notifications.,Functional
+The portal shall enable users to remove reports from the shopping cart.,Functional
+The mobile app should allow patients to reset their password via email verification.,Functional
+The service shall maintain 99.9% uptime as measured on a monthly basis.,Non-Functional
+The application shall permit employees to schedule an appointment with a doctor.,Functional
+The platform shall handle at least 30 transactions per second during peak load.,Non-Functional
+The website shall limit file upload size to 99 MB to prevent abuse.,Non-Functional
+The website shall allow buyers to mark a task as completed.,Functional
+The system must allow users to chat with a support agent in real time.,Functional
+The software shall support at least 200 concurrent users without performance degradation.,Non-Functional
+The application must allow guests to chat with a support agent in real time.,Functional
+The platform shall allow customers to subscribe to a newsletter.,Functional
+The application shall session-timeout inactive users after 90 minutes of inactivity.,Non-Functional
+The service shall permit buyers to leave a review for a purchased medicines.,Functional
+The mobile app shall support internationalization for at least 500 languages.,Non-Functional
+The system must allow supervisors to add rooms to the shopping cart.,Functional
+The system shall permit operators to search for tickets using keywords.,Functional
+The application shall limit file upload size to 50 MB to prevent abuse.,Non-Functional
+The software shall allow auditors to place an order for selected medicines.,Functional
+The application must allow auditors to generate an invoice after purchase.,Functional
+The mobile app shall enable users to export data in CSV format.,Functional
+The system shall allow students to reset their password via email verification.,Functional
+The service should allow auditors to deactivate their account.,Functional
+The portal must allow agents to customize the dashboard layout.,Functional
+The application shall handle at least 1000 transactions per second during peak load.,Non-Functional
+The system shall enable sellers to close a resolved support ticket.,Functional
+The platform should allow employees to send a message to another student.,Functional
+The platform shall allow customers to schedule an appointment with a operator.,Functional
+The service shall allow students to view a dashboard with key metrics.,Functional
+The application shall enable customers to log in using valid credentials.,Functional
+The system shall recover from a system failure within 60 minutes.,Non-Functional
+The system shall respond to user requests within 90 seconds under normal load.,Non-Functional
+The system shall enable patients to log in using valid credentials.,Functional
+The application shall allow guests to print a receipt after payment.,Functional
+The service shall enable managers to send a message to another supervisor.,Functional
+The service shall respond to user requests within 24 seconds under normal load.,Non-Functional
+The application shall support at least 50 concurrent users without performance degradation.,Non-Functional
+The software shall handle at least 3 transactions per second during peak load.,Non-Functional
+The software must allow supervisors to close a resolved support ticket.,Functional
+"The website shall be available 2% of the time, excluding scheduled maintenance.",Non-Functional
+The service shall encrypt all sensitive data using industry-standard encryption algorithms.,Non-Functional
+The mobile app shall session-timeout inactive users after 1000 minutes of inactivity.,Non-Functional
+The website shall retain user data for a minimum of 100 years for compliance purposes.,Non-Functional
+The system shall handle at least 100 transactions per second during peak load.,Non-Functional
+The software shall allow doctors to reset application settings to default.,Functional
+The mobile app shall permit sellers to deactivate their account.,Functional
+The website shall permit customers to mark a task as completed.,Functional
+The application should allow students to track the status of an order.,Functional
+The service shall retain user data for a minimum of 60 years for compliance purposes.,Non-Functional
+The application should allow students to register using their email address and password.,Functional
+The application should allow managers to remove medicines from the shopping cart.,Functional
+The portal shall retain user data for a minimum of 99.9 years for compliance purposes.,Non-Functional
+The platform shall permit users to verify their email address via a confirmation link.,Functional
+The service shall allow customers to download a generated report.,Functional
+The mobile app must allow agents to book a slot for a products.,Functional
+The software shall enable employees to create a new project.,Functional
+The website should allow auditors to import data from an Excel file.,Functional
+The website must allow patients to add multiple items to a wishlist.,Functional
+The portal shall support internationalization for at least 100 languages.,Non-Functional
+The mobile app shall allow students to create a new project.,Functional
+The system should allow patients to submit feedback about the system.,Functional
+The service shall enable supervisors to schedule an appointment with a agent.,Functional
+The platform shall permit patients to change their account password.,Functional
+The mobile app shall enable employees to update the quantity of a courses in stock.,Functional
+The mobile app should allow employees to add multiple items to a wishlist.,Functional
+The mobile app must allow buyers to view a dashboard with key metrics.,Functional
+"The application shall be available 100% of the time, excluding scheduled maintenance.",Non-Functional
+The mobile app shall enable supervisors to filter records by category.,Functional
+The software shall recover from a system failure within 90 minutes.,Non-Functional
+The mobile app shall enable patients to restore a previously deactivated account.,Functional
+The website shall session-timeout inactive users after 99.9 minutes of inactivity.,Non-Functional
+The mobile app shall provide a mobile-responsive interface for all core features.,Non-Functional
+The software shall comply with GDPR data protection regulations.,Non-Functional
+The website shall session-timeout inactive users after 5 minutes of inactivity.,Non-Functional
+The website shall permit operators to export data in CSV format.,Functional
+The platform shall handle at least 10 transactions per second during peak load.,Non-Functional
+The portal shall limit file upload size to 200 MB to prevent abuse.,Non-Functional
+The application should allow users to add a new products to the inventory.,Functional
+The system shall support at least 3 concurrent users without performance degradation.,Non-Functional
+The website must allow managers to download a generated report.,Functional
+The mobile app should allow buyers to sort vehicles by price.,Functional
+"The platform shall be available 5% of the time, excluding scheduled maintenance.",Non-Functional
+The website must allow agents to register using their email address and password.,Functional
+The application shall allow administrators to share a tickets on social media.,Functional
+The system shall permit agents to compare two or more orders.,Functional
+The portal shall enable supervisors to view frequently asked questions.,Functional
+The mobile app shall allow buyers to apply a discount coupon at checkout.,Functional
+The software shall allow supervisors to search for patients using keywords.,Functional
+The portal shall enable agents to verify their email address via a confirmation link.,Functional
+The service shall automatically back up data every 24 hours.,Non-Functional
+The application shall enable patients to upload a profile picture.,Functional
+The platform shall session-timeout inactive users after 90 minutes of inactivity.,Non-Functional
+The portal shall enable managers to filter records by category.,Functional
+The platform shall enable auditors to chat with a support agent in real time.,Functional
+The mobile app shall enable employees to mark a task as completed.,Functional
+The mobile app should allow customers to export data in CSV format.,Functional
+The software must allow customers to place an order for selected reports.,Functional
+The portal shall automatically back up data every 60 hours.,Non-Functional
+The mobile app shall respond to user requests within 200 seconds under normal load.,Non-Functional
+The platform shall permit buyers to update their profile information.,Functional
+The mobile app shall respond to user requests within 500 seconds under normal load.,Non-Functional
+The website shall allow agents to print a receipt after payment.,Functional
+The application shall retain user data for a minimum of 99 years for compliance purposes.,Non-Functional
+The platform shall retain user data for a minimum of 200 years for compliance purposes.,Non-Functional
+The platform shall recover from a system failure within 99 minutes.,Non-Functional
+The service shall support seamless integration with third-party payment gateways.,Non-Functional
+The system shall session-timeout inactive users after 100 minutes of inactivity.,Non-Functional
+The platform shall automatically back up data every 3 hours.,Non-Functional
+The portal shall allow agents to import data from an Excel file.,Functional
+The platform should allow users to search for tickets using keywords.,Functional
+The portal shall handle at least 10 transactions per second during peak load.,Non-Functional
+The software shall enable agents to leave a review for a purchased rooms.,Functional
+The portal shall support internationalization for at least 90 languages.,Non-Functional
+The website shall permit managers to register using their email address and password.,Functional
+The software shall permit operators to verify their email address via a confirmation link.,Functional
+The platform shall enforce password complexity requirements for all user accounts.,Non-Functional
+The website shall automatically back up data every 99 hours.,Non-Functional
+The service shall allow administrators to update the quantity of a reports in stock.,Functional
+The service shall enable employees to view a dashboard with key metrics.,Functional
+The system shall allow sellers to log out of the session securely.,Functional
+The website should allow buyers to add tickets to the shopping cart.,Functional
+The system shall allow auditors to submit feedback about the mobile app.,Functional
+The mobile app shall enforce password complexity requirements for all user accounts.,Non-Functional
+The platform must allow doctors to compare two or more courses.,Functional
+The application must allow managers to leave a review for a purchased rooms.,Functional
+The software shall enable operators to unsubscribe from email notifications.,Functional
+The application must allow doctors to view order history.,Functional
+The platform must allow supervisors to print a receipt after payment.,Functional
+The service shall retain user data for a minimum of 1000 years for compliance purposes.,Non-Functional
+The platform shall enable customers to delete a courses from the catalog.,Functional
+The application shall respond to user requests within 90 seconds under normal load.,Non-Functional
+The software shall limit file upload size to 50 MB to prevent abuse.,Non-Functional
+The portal shall respond to user requests within 3 seconds under normal load.,Non-Functional
+The mobile app should allow agents to add multiple items to a wishlist.,Functional
+The application shall support internationalization for at least 100 languages.,Non-Functional
+The application shall allow users to enable two-factor authentication.,Functional
+The portal must allow sellers to register using their email address and password.,Functional
+The platform shall automatically back up data every 99.9 hours.,Non-Functional
+The portal shall permit users to receive a notification when a message is received.,Functional
+The mobile app must allow operators to delete a services from the catalog.,Functional
+The service must allow patients to reset application settings to default.,Functional
+"The software shall be maintainable with well-documented, modular source code.",Non-Functional
+The mobile app should allow managers to upload documents for verification.,Functional
+The mobile app shall enable auditors to remove orders from the shopping cart.,Functional
+The application must allow auditors to view real-time notifications.,Functional
+The system should allow students to cancel a scheduled appointment.,Functional
+The service shall allow guests to export data in CSV format.,Functional
+The application shall permit administrators to register using their email address and password.,Functional
+The platform shall permit doctors to schedule an appointment with a employee.,Functional
+The website shall maintain 99.9% uptime as measured on a monthly basis.,Non-Functional
+The software shall enable managers to subscribe to a newsletter.,Functional
+The website should allow guests to filter records by category.,Functional
+The software shall allow buyers to view order history.,Functional
+The mobile app shall enable users to rate a appointments on a scale of 1 to 5.,Functional
+The platform shall allow users to view real-time notifications.,Functional
+The system shall automatically back up data every 60 hours.,Non-Functional
+"The system shall be available 60% of the time, excluding scheduled maintenance.",Non-Functional
+The platform should allow guests to schedule an appointment with a auditor.,Functional
+The application must allow supervisors to log out of the session securely.,Functional
+The software should allow students to submit feedback about the website.,Functional
+The application should allow sellers to make a payment using a credit card.,Functional
+The service shall retain user data for a minimum of 10 years for compliance purposes.,Non-Functional
+The system must allow auditors to add a new files to the inventory.,Functional
+The mobile app shall permit students to upload a profile picture.,Functional
+The platform should allow buyers to compare two or more rooms.,Functional
+The website shall permit auditors to restore a previously deactivated account.,Functional
+The portal shall enable managers to delete a patients from the catalog.,Functional
+The service shall allow guests to reset application settings to default.,Functional
+The website must allow employees to revoke access permissions from a doctor.,Functional
+The system should allow auditors to reset application settings to default.,Functional
+The application should allow auditors to reset their password via email verification.,Functional
+The software shall be compatible with the latest versions of major web browsers.,Non-Functional
+The portal should allow agents to view real-time notifications.,Functional
+The application should allow supervisors to change their account password.,Functional
+The application shall retain user data for a minimum of 90 years for compliance purposes.,Non-Functional
+The system shall handle at least 200 transactions per second during peak load.,Non-Functional
+The software should allow auditors to view the terms and conditions before registering.,Functional
+The website must allow sellers to view the terms and conditions before registering.,Functional
+The mobile app shall permit doctors to submit feedback about the platform.,Functional
+The application must allow auditors to change their account password.,Functional
+The system shall limit file upload size to 5 MB to prevent abuse.,Non-Functional
+The software shall support automatic failover to a backup server in case of outage.,Non-Functional
+The system shall permit agents to restore a previously deactivated account.,Functional
+The mobile app shall session-timeout inactive users after 10 minutes of inactivity.,Non-Functional
+The software shall respond to user requests within 100 seconds under normal load.,Non-Functional
+The website shall enable operators to upload documents for verification.,Functional
+"The platform shall be available 90% of the time, excluding scheduled maintenance.",Non-Functional
+The system must allow buyers to make a payment using a digital wallet.,Functional
+The service shall permit employees to update their profile information.,Functional
+The system must allow patients to mark a task as completed.,Functional
+The platform shall respond to user requests within 50 seconds under normal load.,Non-Functional
+The platform shall enable buyers to generate a monthly summary report.,Functional
+The portal should allow managers to mark a task as completed.,Functional
+"The mobile app shall be available 99% of the time, excluding scheduled maintenance.",Non-Functional
+The software shall allow sellers to create a new project.,Functional
+The service shall support at least 24 concurrent users without performance degradation.,Non-Functional
+The platform shall permit sellers to verify their email address via a confirmation link.,Functional
+The service shall permit employees to import data from an Excel file.,Functional
+The application shall allow operators to submit a support ticket.,Functional
+The platform shall enable guests to enable two-factor authentication.,Functional
+The service must allow managers to reset application settings to default.,Functional
+The system shall permit managers to receive a notification when a message is received.,Functional
+The platform shall recover from a system failure within 200 minutes.,Non-Functional
+The mobile app shall enable users to upload a profile picture.,Functional
+The software shall allow guests to grant role-based access to a student.,Functional
+The portal shall allow patients to deactivate their account.,Functional
+The system must allow patients to cancel an existing order.,Functional
+The service shall recover from a system failure within 99.9 minutes.,Non-Functional
+The application shall retain user data for a minimum of 500 years for compliance purposes.,Non-Functional
+The system shall retain user data for a minimum of 24 years for compliance purposes.,Non-Functional
+The service shall support internationalization for at least 500 languages.,Non-Functional
+The platform must allow managers to add comments to a task.,Functional
+The system shall permit sellers to upload documents for verification.,Functional
+The portal must allow students to chat with a support agent in real time.,Functional
+The software must allow administrators to unsubscribe from email notifications.,Functional
+The portal should allow customers to rate a tickets on a scale of 1 to 5.,Functional
+The application shall allow administrators to attach files to a support ticket.,Functional
+The service shall permit customers to submit a support ticket.,Functional
+The mobile app shall permit employees to filter vehicles by category.,Functional
+The mobile app shall notify administrators immediately in case of a security breach.,Non-Functional
+The software must allow administrators to leave a review for a purchased vehicles.,Functional
+The software shall automatically back up data every 5 hours.,Non-Functional
+The software must allow users to subscribe to a newsletter.,Functional
+The portal shall allow sellers to delete a services from the catalog.,Functional
+The platform shall allow agents to revoke access permissions from a administrator.,Functional
+The website should allow customers to book a slot for a medicines.,Functional
+The portal should allow sellers to generate a monthly summary report.,Functional
+The system shall automatically back up data every 2 hours.,Non-Functional
+The application shall support internationalization for at least 5 languages.,Non-Functional
+The portal shall enable guests to upload documents for verification.,Functional
+The software must allow supervisors to reschedule an existing appointment.,Functional
+The software must allow users to cancel an existing order.,Functional
+The service shall respond to user requests within 99 seconds under normal load.,Non-Functional
+The service must allow buyers to place an order for selected medicines.,Functional
+The software should allow patients to verify their email address via a confirmation link.,Functional
+The website must allow administrators to generate an invoice after purchase.,Functional
+The platform shall enable supervisors to enable two-factor authentication.,Functional
+The mobile app shall retain user data for a minimum of 99.9 years for compliance purposes.,Non-Functional
+The system should allow patients to cancel a scheduled appointment.,Functional
+The service must allow supervisors to share a reports on social media.,Functional
+"The mobile app shall be available 200% of the time, excluding scheduled maintenance.",Non-Functional
+The system should allow patients to add comments to a task.,Functional
+The service shall permit administrators to search for products using keywords.,Functional
+The website shall support internationalization for at least 24 languages.,Non-Functional
+The system shall permit doctors to cancel a scheduled appointment.,Functional
+The system must allow operators to create a new project.,Functional
+The system shall enable guests to download a generated report.,Functional
+The website shall allow auditors to log in using valid credentials.,Functional
+The application shall permit users to restore a previously deactivated account.,Functional
+The portal must allow managers to unsubscribe from email notifications.,Functional
+The application shall enable operators to view the terms and conditions before registering.,Functional
+The application shall allow employees to reset their password via email verification.,Functional
+The system shall handle at least 50 transactions per second during peak load.,Non-Functional
+The software shall automatically back up data every 100 hours.,Non-Functional
+The portal must allow employees to track the status of an order.,Functional
+The system shall allow doctors to customize the dashboard layout.,Functional
+The mobile app must allow patients to filter reports by category.,Functional
+The system shall limit file upload size to 90 MB to prevent abuse.,Non-Functional
+The application shall allow employees to place an order for selected rooms.,Functional
+The website shall allow customers to reschedule an existing appointment.,Functional
+The software should allow customers to make a payment using a credit card.,Functional
+The service shall recover from a system failure within 200 minutes.,Non-Functional
+The application shall allow sellers to cancel a scheduled appointment.,Functional
+The portal shall enable users to revoke access permissions from a supervisor.,Functional
+The mobile app shall allow agents to filter tickets by category.,Functional
+The website shall allow doctors to assign a task to a administrator.,Functional
+The software shall allow auditors to upload a profile picture.,Functional
+The software shall respond to user requests within 99 seconds under normal load.,Non-Functional
+The portal shall permit doctors to add comments to a task.,Functional
+The service shall allow doctors to update their profile information.,Functional
+The service should allow employees to add comments to a task.,Functional
+The platform must allow buyers to log in using valid credentials.,Functional
+The platform shall support at least 30 concurrent users without performance degradation.,Non-Functional
+The system shall allow patients to assign a task to a customer.,Functional
+The service shall limit file upload size to 24 MB to prevent abuse.,Non-Functional
+The platform must allow agents to apply a discount coupon at checkout.,Functional
+The application must allow guests to subscribe to a newsletter.,Functional
+The application shall retain user data for a minimum of 24 years for compliance purposes.,Non-Functional
+"The application shall be available 3% of the time, excluding scheduled maintenance.",Non-Functional
+The portal shall permit employees to deactivate their account.,Functional
+The software shall session-timeout inactive users after 30 minutes of inactivity.,Non-Functional
+The portal should allow buyers to download a generated report.,Functional
+The platform shall permit operators to log in using valid credentials.,Functional
+The portal shall permit operators to reschedule an existing appointment.,Functional
+The application shall permit administrators to book a slot for a students.,Functional
+The website shall permit administrators to download a generated report.,Functional
+The website shall log all failed login attempts for security auditing purposes.,Non-Functional
+The application shall permit customers to generate a monthly summary report.,Functional
+The software shall permit managers to enable two-factor authentication.,Functional
+The portal shall respond to user requests within 1000 seconds under normal load.,Non-Functional
+The website shall allow supervisors to deactivate their account.,Functional
+The mobile app shall permit operators to log out of the session securely.,Functional
+The software should allow doctors to enable two-factor authentication.,Functional
+The website must allow operators to generate an invoice after purchase.,Functional
+The mobile app shall permit employees to customize the dashboard layout.,Functional
+The application shall recover from a system failure within 50 minutes.,Non-Functional
+The website should allow sellers to reset application settings to default.,Functional
+The platform shall permit supervisors to add comments to a task.,Functional
+The platform shall support internationalization for at least 2 languages.,Non-Functional
+The platform shall enable sellers to remove appointments from the shopping cart.,Functional
+The software shall retain user data for a minimum of 90 years for compliance purposes.,Non-Functional
+The application shall allow employees to unsubscribe from email notifications.,Functional
+The software shall permit students to change their account password.,Functional
+The website shall respond to user requests within 1000 seconds under normal load.,Non-Functional
+The portal should allow patients to print a receipt after payment.,Functional
+The service shall enable students to book a slot for a tickets.,Functional
+The software shall allow sellers to add multiple items to a wishlist.,Functional
+The application must allow supervisors to update the quantity of a books in stock.,Functional
+The platform shall support at least 500 concurrent users without performance degradation.,Non-Functional
+The service shall allow employees to view real-time notifications.,Functional
+The platform shall recover from a system failure within 99.9 minutes.,Non-Functional
+The platform shall allow users to customize the dashboard layout.,Functional
+"The platform shall be available 60% of the time, excluding scheduled maintenance.",Non-Functional
+The platform shall handle at least 200 transactions per second during peak load.,Non-Functional
+The platform shall limit file upload size to 50 MB to prevent abuse.,Non-Functional
+The portal must allow patients to remove patients from the shopping cart.,Functional
+The application shall allow users to register using their email address and password.,Functional
+The platform shall respond to user requests within 5 seconds under normal load.,Non-Functional
+The application must allow students to schedule an appointment with a student.,Functional
+The portal must allow users to send a message to another customer.,Functional
+The platform shall permit students to cancel an existing order.,Functional
+The portal shall allow guests to register using their email address and password.,Functional
+The system must allow auditors to schedule an appointment with a buyer.,Functional
+The application shall support internationalization for at least 30 languages.,Non-Functional
+The website shall enable agents to add comments to a task.,Functional
+The website must allow employees to print a receipt after payment.,Functional
+The mobile app shall automatically back up data every 3 hours.,Non-Functional
+"The application shall be available 24% of the time, excluding scheduled maintenance.",Non-Functional
+The system shall permit employees to view order history.,Functional
+The platform must allow managers to attach files to a support ticket.,Functional
+The platform shall permit doctors to generate a monthly summary report.,Functional
+The system shall allow agents to send a message to another customer.,Functional
+The mobile app shall enable patients to export data in CSV format.,Functional
+The website shall automatically back up data every 24 hours.,Non-Functional
+The platform should allow customers to restore a previously deactivated account.,Functional
+The system shall allow buyers to view real-time notifications.,Functional
+The service shall allow customers to view frequently asked questions.,Functional
+The mobile app shall permit students to add comments to a task.,Functional
+The service should allow employees to download a generated report.,Functional
+The website shall enable supervisors to log in using valid credentials.,Functional
+The service shall support internationalization for at least 2 languages.,Non-Functional
+The service shall permit administrators to enable two-factor authentication.,Functional
+The application should allow agents to view a dashboard with key metrics.,Functional
+The website shall session-timeout inactive users after 100 minutes of inactivity.,Non-Functional
+The platform should allow agents to enable two-factor authentication.,Functional
+The software must allow administrators to add patients to the shopping cart.,Functional
+The system shall respond to user requests within 3 seconds under normal load.,Non-Functional
+The service shall support internationalization for at least 50 languages.,Non-Functional
+The application shall enable guests to sort reports by price.,Functional
+The system shall allow supervisors to cancel an existing order.,Functional
+The portal should allow customers to view the terms and conditions before registering.,Functional
+The website shall permit agents to cancel an existing order.,Functional
+The application shall enable managers to export data in CSV format.,Functional
+The platform must allow patients to upload documents for verification.,Functional
+The platform shall permit doctors to subscribe to a newsletter.,Functional
+The mobile app shall respond to user requests within 24 seconds under normal load.,Non-Functional
+The system shall allow students to send a message to another customer.,Functional
+The website should allow students to reschedule an existing appointment.,Functional
+The platform must allow agents to chat with a support agent in real time.,Functional
+The application shall session-timeout inactive users after 500 minutes of inactivity.,Non-Functional
+The mobile app should allow guests to log in using valid credentials.,Functional
+"The system shall be available 2% of the time, excluding scheduled maintenance.",Non-Functional
+The software shall enable operators to schedule an appointment with a auditor.,Functional
+The platform shall allow students to leave a review for a purchased reports.,Functional
+The mobile app shall enable administrators to view the terms and conditions before registering.,Functional
+The portal shall respond to user requests within 24 seconds under normal load.,Non-Functional
+The system shall respond to user requests within 100 seconds under normal load.,Non-Functional
+The website should allow employees to assign a task to a student.,Functional
+The website must allow sellers to restore a previously deactivated account.,Functional
+The portal must allow supervisors to export data in CSV format.,Functional
+The mobile app shall automatically back up data every 1000 hours.,Non-Functional
+The portal shall enable buyers to restore a previously deactivated account.,Functional
+The application must allow users to apply a discount coupon at checkout.,Functional
+"The website shall be available 500% of the time, excluding scheduled maintenance.",Non-Functional
+The mobile app must allow users to add comments to a task.,Functional
+The application shall recover from a system failure within 5 minutes.,Non-Functional
+The website shall permit customers to close a resolved support ticket.,Functional
+The mobile app should allow operators to reset application settings to default.,Functional
+The service shall permit users to generate an invoice after purchase.,Functional
+The application should allow managers to log in using valid credentials.,Functional
+The software shall enable students to compare two or more products.,Functional
+The mobile app shall retain user data for a minimum of 100 years for compliance purposes.,Non-Functional
+The website shall enable administrators to rate a reports on a scale of 1 to 5.,Functional
+"The service shall be available 50% of the time, excluding scheduled maintenance.",Non-Functional
+The portal shall handle at least 1000 transactions per second during peak load.,Non-Functional
+The software shall permit employees to cancel a scheduled appointment.,Functional
+The portal should allow supervisors to submit feedback about the software.,Functional
+The application shall allow buyers to reset application settings to default.,Functional
+The website must allow auditors to download a generated report.,Functional
+The portal must allow sellers to schedule an appointment with a customer.,Functional
+The website shall permit doctors to generate an invoice after purchase.,Functional
+"The website shall be available 5% of the time, excluding scheduled maintenance.",Non-Functional
+The website shall allow administrators to schedule an appointment with a operator.,Functional
+The system shall permit guests to view order history.,Functional
+The platform should allow employees to book a slot for a patients.,Functional
+The mobile app shall enable administrators to view frequently asked questions.,Functional
+The website must allow guests to make a payment using a credit card.,Functional
+The service must allow administrators to place an order for selected products.,Functional
+The portal should allow auditors to revoke access permissions from a buyer.,Functional
+The portal shall enable auditors to unsubscribe from email notifications.,Functional
+The system must allow customers to update the quantity of a services in stock.,Functional
+The platform shall automatically back up data every 60 hours.,Non-Functional
+The software should allow buyers to subscribe to a newsletter.,Functional
+The software shall session-timeout inactive users after 3 minutes of inactivity.,Non-Functional
+The platform must allow doctors to import data from an Excel file.,Functional
+The software shall session-timeout inactive users after 1000 minutes of inactivity.,Non-Functional
+The platform shall permit buyers to register using their email address and password.,Functional
+The portal shall permit supervisors to unsubscribe from email notifications.,Functional
+The application must allow auditors to update their profile information.,Functional
+The service must allow doctors to send a message to another operator.,Functional
+The mobile app shall enable administrators to verify their email address via a confirmation link.,Functional
+The portal should allow students to subscribe to a newsletter.,Functional
+The application shall enable operators to assign a task to a operator.,Functional
+The mobile app should allow users to sort medicines by price.,Functional
+The website shall allow buyers to add a new medicines to the inventory.,Functional
+"The website shall be available 3% of the time, excluding scheduled maintenance.",Non-Functional
+The service shall respond to user requests within 200 seconds under normal load.,Non-Functional
+The mobile app must allow users to share a patients on social media.,Functional
+The portal shall allow employees to rate a students on a scale of 1 to 5.,Functional
+The service shall limit file upload size to 60 MB to prevent abuse.,Non-Functional
+The service must allow administrators to assign a task to a student.,Functional
+The website must allow guests to import data from an Excel file.,Functional
+The mobile app shall retain user data for a minimum of 500 years for compliance purposes.,Non-Functional
+The platform shall permit patients to rate a tickets on a scale of 1 to 5.,Functional
+The website must allow guests to view the terms and conditions before registering.,Functional
+The portal shall permit operators to subscribe to a newsletter.,Functional
+The software shall automatically back up data every 99.9 hours.,Non-Functional
+The portal shall enable supervisors to make a payment using a credit card.,Functional
+The software shall handle at least 5 transactions per second during peak load.,Non-Functional
+The website shall allow managers to compare two or more courses.,Functional
+The platform shall retain user data for a minimum of 2 years for compliance purposes.,Non-Functional
+The application should allow buyers to grant role-based access to a guest.,Functional
+The portal shall allow buyers to make a payment using a credit card.,Functional
+The portal should allow supervisors to restore a previously deactivated account.,Functional
+The mobile app should allow buyers to add multiple items to a wishlist.,Functional
+The website shall enable guests to reset their password via email verification.,Functional
+The software should allow managers to print a receipt after payment.,Functional
+The website shall permit guests to delete a courses from the catalog.,Functional
+"The software shall be available 90% of the time, excluding scheduled maintenance.",Non-Functional
+The website must allow agents to attach files to a support ticket.,Functional
+The mobile app shall respond to user requests within 50 seconds under normal load.,Non-Functional
+The website shall permit students to share a medicines on social media.,Functional
+The mobile app shall allow sellers to cancel an existing order.,Functional
+The mobile app should allow patients to view frequently asked questions.,Functional
+The system shall permit buyers to submit a support ticket.,Functional
+The website shall allow operators to book a slot for a vehicles.,Functional
+The system shall automatically back up data every 50 hours.,Non-Functional
+The portal shall enable administrators to create a new project.,Functional
+The software shall enable patients to track the status of an order.,Functional
+The application shall enable sellers to export data in CSV format.,Functional
+The system shall allow patients to revoke access permissions from a user.,Functional
+The software shall allow operators to add comments to a task.,Functional
+The mobile app should allow managers to view real-time notifications.,Functional
+The website shall permit customers to log out of the session securely.,Functional
+"The system shall be available 500% of the time, excluding scheduled maintenance.",Non-Functional
+The platform shall allow customers to apply a discount coupon at checkout.,Functional
+The software must allow patients to subscribe to a newsletter.,Functional
+The website shall permit students to download a generated report.,Functional
+The platform shall allow users to track the status of an order.,Functional
+The system shall handle at least 3 transactions per second during peak load.,Non-Functional
+The application shall allow users to reset their password via email verification.,Functional
+The website shall enable sellers to chat with a support agent in real time.,Functional
+The application shall support at least 1000 concurrent users without performance degradation.,Non-Functional
+The application shall handle at least 200 transactions per second during peak load.,Non-Functional
+The software shall permit operators to remove courses from the shopping cart.,Functional
+The mobile app must allow doctors to place an order for selected medicines.,Functional
+The application shall permit agents to create a new project.,Functional
+The system shall enable supervisors to view order history.,Functional
+The portal must allow sellers to compare two or more students.,Functional
+The software shall automatically back up data every 30 hours.,Non-Functional
+The system shall enable doctors to book a slot for a patients.,Functional
+The service shall allow supervisors to generate an invoice after purchase.,Functional
+The mobile app shall permit customers to add comments to a task.,Functional
+The mobile app shall permit patients to update their profile information.,Functional
+The application shall support internationalization for at least 99 languages.,Non-Functional
+The system must allow operators to add a new medicines to the inventory.,Functional
+The system shall permit employees to log out of the session securely.,Functional
+The system shall allow customers to view real-time notifications.,Functional
+The system shall permit patients to attach files to a support ticket.,Functional
+The system shall enable buyers to upload a profile picture.,Functional
+The platform must allow employees to compare two or more books.,Functional
+The mobile app shall support at least 3 concurrent users without performance degradation.,Non-Functional
+The website should allow auditors to track the status of an order.,Functional
+The portal shall allow buyers to reset their password via email verification.,Functional
+The software should allow supervisors to update their profile information.,Functional
+The mobile app should allow agents to log in using valid credentials.,Functional
+The mobile app shall allow operators to chat with a support agent in real time.,Functional
+The portal should allow managers to view the terms and conditions before registering.,Functional
+The system shall permit users to book a slot for a invoices.,Functional
+The application shall permit users to schedule an appointment with a manager.,Functional
+The system shall permit patients to submit a support ticket.,Functional
+The website should allow employees to add a new books to the inventory.,Functional
+The system shall permit users to compare two or more medicines.,Functional
+The platform shall allow operators to deactivate their account.,Functional
+"The application shall be available 2% of the time, excluding scheduled maintenance.",Non-Functional
+The website shall allow sellers to search for reports using keywords.,Functional
+The platform shall automatically back up data every 200 hours.,Non-Functional
+The platform must allow patients to sort tickets by price.,Functional
+The mobile app shall limit file upload size to 100 MB to prevent abuse.,Non-Functional
+The mobile app shall mask sensitive information such as passwords and card numbers in the UI.,Non-Functional
+The system shall permit customers to change their account password.,Functional
+The application shall enable students to view the terms and conditions before registering.,Functional
+The application should allow employees to cancel an existing order.,Functional
+The application shall permit supervisors to reset their password via email verification.,Functional
+The website must allow sellers to reset their password via email verification.,Functional
+The portal shall enable patients to view order history.,Functional
+The portal shall enable users to view the terms and conditions before registering.,Functional
+The platform shall enable users to make a payment using a digital wallet.,Functional
+The portal shall support internationalization for at least 60 languages.,Non-Functional
+The mobile app shall enable customers to import data from an Excel file.,Functional
+The service shall permit buyers to schedule an appointment with a administrator.,Functional
+The application shall enable managers to view a dashboard with key metrics.,Functional
+The mobile app must allow auditors to share a students on social media.,Functional
+The website shall allow administrators to grant role-based access to a buyer.,Functional
+The service shall enable administrators to subscribe to a newsletter.,Functional
+The software must allow managers to search for services using keywords.,Functional
+The service shall support internationalization for at least 100 languages.,Non-Functional
+The mobile app shall enable guests to verify their email address via a confirmation link.,Functional
+The service shall allow patients to create a new project.,Functional
+The software should allow operators to filter students by category.,Functional
+The website shall permit doctors to mark a task as completed.,Functional
+The application shall enable operators to compare two or more records.,Functional
+The portal shall allow guests to customize the dashboard layout.,Functional
+The software shall enable operators to add multiple items to a wishlist.,Functional
+The application shall handle at least 60 transactions per second during peak load.,Non-Functional
+The mobile app shall enable sellers to mark a task as completed.,Functional
+The system shall permit employees to sort medicines by price.,Functional
+The portal must allow agents to share a services on social media.,Functional
+The software shall session-timeout inactive users after 200 minutes of inactivity.,Non-Functional
+The software shall permit guests to generate a monthly summary report.,Functional
+"The website shall be available 50% of the time, excluding scheduled maintenance.",Non-Functional
+The service shall enable doctors to create a new project.,Functional
+The system should allow sellers to submit a support ticket.,Functional
+The website shall enable auditors to log out of the session securely.,Functional
+The platform shall enable managers to chat with a support agent in real time.,Functional
+The platform shall limit file upload size to 500 MB to prevent abuse.,Non-Functional
+The service shall support at least 10 concurrent users without performance degradation.,Non-Functional
+The portal shall session-timeout inactive users after 5 minutes of inactivity.,Non-Functional
+The mobile app shall support at least 60 concurrent users without performance degradation.,Non-Functional
+The portal shall allow guests to compare two or more courses.,Functional
+The service shall retain user data for a minimum of 99 years for compliance purposes.,Non-Functional
+The website must allow students to make a payment using a digital wallet.,Functional
+The website shall recover from a system failure within 5 minutes.,Non-Functional
+The system shall permit doctors to unsubscribe from email notifications.,Functional
+The website shall allow users to reschedule an existing appointment.,Functional
+The mobile app shall permit agents to make a payment using a digital wallet.,Functional
+The software should allow users to view frequently asked questions.,Functional
+The application shall recover from a system failure within 99 minutes.,Non-Functional
+The mobile app shall allow buyers to delete a files from the catalog.,Functional
+The service should allow operators to apply a discount coupon at checkout.,Functional
+The application shall enable users to grant role-based access to a operator.,Functional
+The platform should allow employees to submit feedback about the website.,Functional
+The platform shall enable managers to submit a support ticket.,Functional
+The software should allow guests to make a payment using a digital wallet.,Functional
+The system shall enable supervisors to generate a monthly summary report.,Functional
+The website should allow customers to track the status of an order.,Functional
+The platform shall allow guests to close a resolved support ticket.,Functional
+The application shall respond to user requests within 10 seconds under normal load.,Non-Functional
+The service shall permit buyers to change their account password.,Functional
+The software shall allow doctors to add multiple items to a wishlist.,Functional
+The service shall support internationalization for at least 90 languages.,Non-Functional
+The application shall support at least 5 concurrent users without performance degradation.,Non-Functional
+The application should allow supervisors to submit a support ticket.,Functional
+The platform shall retain user data for a minimum of 50 years for compliance purposes.,Non-Functional
+The platform shall session-timeout inactive users after 1000 minutes of inactivity.,Non-Functional
+The service shall permit doctors to reschedule an existing appointment.,Functional
+The application shall automatically back up data every 500 hours.,Non-Functional
+The software shall support at least 24 concurrent users without performance degradation.,Non-Functional
+The mobile app shall automatically back up data every 60 hours.,Non-Functional
+The service must allow users to update the quantity of a courses in stock.,Functional
+The service shall support internationalization for at least 99.9 languages.,Non-Functional
+The website shall permit supervisors to book a slot for a appointments.,Functional
+The service must allow administrators to submit feedback about the service.,Functional
+The website shall allow employees to upload a profile picture.,Functional
+The system shall enable employees to reschedule an existing appointment.,Functional
+The website shall permit students to import data from an Excel file.,Functional
+The platform must allow customers to add patients to the shopping cart.,Functional
+The application should allow employees to reset application settings to default.,Functional
+The portal shall permit operators to register using their email address and password.,Functional
+The application must allow managers to generate a monthly summary report.,Functional
+"The platform shall be available 100% of the time, excluding scheduled maintenance.",Non-Functional
+The website shall limit file upload size to 2 MB to prevent abuse.,Non-Functional
+The platform should allow administrators to export data in CSV format.,Functional
+The portal must allow auditors to view order history.,Functional
+The software shall enable doctors to attach files to a support ticket.,Functional
+The application shall support at least 60 concurrent users without performance degradation.,Non-Functional
+The portal must allow doctors to upload documents for verification.,Functional
+The application shall enable sellers to send a message to another operator.,Functional
+The platform shall limit file upload size to 2 MB to prevent abuse.,Non-Functional
+The portal shall permit managers to create a new project.,Functional
+The application must allow sellers to download a generated report.,Functional
+The application shall permit users to view a dashboard with key metrics.,Functional
+The service must allow guests to book a slot for a students.,Functional
+The website should allow doctors to delete a invoices from the catalog.,Functional
+The website shall enable administrators to log in using valid credentials.,Functional
+The mobile app shall enable agents to update their profile information.,Functional
+The mobile app shall recover from a system failure within 30 minutes.,Non-Functional
+The application shall limit file upload size to 24 MB to prevent abuse.,Non-Functional
+The system shall permit auditors to upload documents for verification.,Functional
+The mobile app shall permit guests to unsubscribe from email notifications.,Functional
+"The application shall be available 30% of the time, excluding scheduled maintenance.",Non-Functional
+The mobile app shall permit sellers to track the status of an order.,Functional
+The portal should allow customers to reset application settings to default.,Functional
+The application should allow managers to upload a profile picture.,Functional
+The application shall permit auditors to subscribe to a newsletter.,Functional
+The application shall recover from a system failure within 2 minutes.,Non-Functional
+"The platform shall be available 2% of the time, excluding scheduled maintenance.",Non-Functional
+The application shall limit file upload size to 99.9 MB to prevent abuse.,Non-Functional
+The portal shall allow buyers to view the terms and conditions before registering.,Functional
+"The platform shall be available 1000% of the time, excluding scheduled maintenance.",Non-Functional
+The service shall enable guests to receive a notification when a payment is received.,Functional
+The software shall enable patients to apply a discount coupon at checkout.,Functional
+The platform should allow customers to remove courses from the shopping cart.,Functional
+The system shall permit guests to view a dashboard with key metrics.,Functional
+The website should allow buyers to remove tickets from the shopping cart.,Functional
+The mobile app shall allow employees to change their account password.,Functional
+The portal must allow supervisors to make a payment using a digital wallet.,Functional
+The system shall recover from a system failure within 3 minutes.,Non-Functional
+The system shall retain user data for a minimum of 100 years for compliance purposes.,Non-Functional
+The portal must allow sellers to leave a review for a purchased reports.,Functional
+The portal shall permit agents to place an order for selected reports.,Functional
+The system shall enable supervisors to mark a task as completed.,Functional
+The mobile app should allow users to reset application settings to default.,Functional
+The mobile app must allow sellers to customize the dashboard layout.,Functional
+The portal shall enable guests to generate an invoice after purchase.,Functional
+The system shall session-timeout inactive users after 200 minutes of inactivity.,Non-Functional
+The application shall permit auditors to make a payment using a credit card.,Functional
+The website must allow employees to close a resolved support ticket.,Functional
+The platform shall enable auditors to grant role-based access to a auditor.,Functional
+The website should allow managers to view order history.,Functional
+The system shall allow buyers to customize the dashboard layout.,Functional
+The software must allow students to attach files to a support ticket.,Functional
+The service must allow buyers to export data in CSV format.,Functional
+The service shall enable operators to restore a previously deactivated account.,Functional
+The mobile app shall permit students to log out of the session securely.,Functional
+The platform shall support at least 99 concurrent users without performance degradation.,Non-Functional
+The portal should allow supervisors to register using their email address and password.,Functional
+The website shall permit patients to download a generated report.,Functional
+The platform should allow operators to upload a profile picture.,Functional
+The system must allow buyers to log out of the session securely.,Functional
+The application should allow users to cancel a scheduled appointment.,Functional
+The service shall allow managers to import data from an Excel file.,Functional
+The mobile app should allow administrators to track the status of an order.,Functional
+The service should allow managers to rate a patients on a scale of 1 to 5.,Functional
+The software shall allow users to attach files to a support ticket.,Functional
+The mobile app shall recover from a system failure within 99 minutes.,Non-Functional
+The platform shall allow patients to add a new products to the inventory.,Functional
+The platform should allow students to make a payment using a credit card.,Functional
+The application shall enable operators to mark a task as completed.,Functional
+The system shall handle at least 1000 transactions per second during peak load.,Non-Functional
+The website should allow guests to submit a support ticket.,Functional
+The platform shall enable doctors to view a dashboard with key metrics.,Functional
+The application shall support at least 24 concurrent users without performance degradation.,Non-Functional
+The service shall enable guests to add comments to a task.,Functional
+The mobile app should allow employees to submit a support ticket.,Functional
+The application must allow customers to generate an invoice after purchase.,Functional
+The platform should allow patients to schedule an appointment with a buyer.,Functional
+The application shall allow supervisors to attach files to a support ticket.,Functional
+The system shall enable operators to enable two-factor authentication.,Functional
+The service should allow supervisors to subscribe to a newsletter.,Functional
+The system shall limit file upload size to 30 MB to prevent abuse.,Non-Functional
+The service shall permit auditors to add comments to a task.,Functional
+The website shall permit buyers to view frequently asked questions.,Functional
+The software must allow buyers to import data from an Excel file.,Functional
+The system shall retain user data for a minimum of 3 years for compliance purposes.,Non-Functional
+The website shall allow sellers to upload a profile picture.,Functional
+The mobile app shall enable doctors to rate a rooms on a scale of 1 to 5.,Functional
+The portal shall retain user data for a minimum of 100 years for compliance purposes.,Non-Functional
+The website shall allow guests to reschedule an existing appointment.,Functional
+The application should allow students to unsubscribe from email notifications.,Functional
+The service shall permit operators to print a receipt after payment.,Functional
+The mobile app should allow administrators to apply a discount coupon at checkout.,Functional
+The software shall permit auditors to attach files to a support ticket.,Functional
+The service shall enable managers to view frequently asked questions.,Functional
+The application shall session-timeout inactive users after 2 minutes of inactivity.,Non-Functional
+"The portal shall be available 500% of the time, excluding scheduled maintenance.",Non-Functional
+The portal shall limit file upload size to 2 MB to prevent abuse.,Non-Functional
+"The system shall be available 5% of the time, excluding scheduled maintenance.",Non-Functional
+The website shall allow doctors to verify their email address via a confirmation link.,Functional
+The service should allow doctors to close a resolved support ticket.,Functional
+The portal shall enable sellers to add a new tickets to the inventory.,Functional
+The software should allow managers to track the status of an order.,Functional
+The service must allow customers to attach files to a support ticket.,Functional
+"The software shall be available 60% of the time, excluding scheduled maintenance.",Non-Functional
+The service shall enable administrators to reschedule an existing appointment.,Functional
+The platform must allow supervisors to reset application settings to default.,Functional
+The application should allow buyers to book a slot for a services.,Functional
+The website shall allow supervisors to grant role-based access to a doctor.,Functional
+The platform shall recover from a system failure within 2 minutes.,Non-Functional
+The system must allow students to restore a previously deactivated account.,Functional
+The mobile app shall permit users to log in using valid credentials.,Functional
+The portal shall enable buyers to send a message to another patient.,Functional
+"The application shall be available 90% of the time, excluding scheduled maintenance.",Non-Functional
+The service shall handle at least 2 transactions per second during peak load.,Non-Functional
+The website should allow users to upload documents for verification.,Functional
+The application shall allow buyers to create a new project.,Functional
+The website shall retain user data for a minimum of 200 years for compliance purposes.,Non-Functional
+The website shall enable customers to send a message to another user.,Functional
+The portal shall enable guests to cancel an existing order.,Functional
+The application shall enable operators to generate a monthly summary report.,Functional
+The service shall recover from a system failure within 90 minutes.,Non-Functional
+The platform shall permit students to update the quantity of a services in stock.,Functional
+The software shall respond to user requests within 24 seconds under normal load.,Non-Functional
+The portal shall allow agents to assign a task to a student.,Functional
+The platform shall limit file upload size to 99.9 MB to prevent abuse.,Non-Functional
+The platform shall allow customers to create a new project.,Functional
+The software shall enable auditors to rate a services on a scale of 1 to 5.,Functional
+The portal shall enable doctors to search for medicines using keywords.,Functional
+The portal shall allow employees to add orders to the shopping cart.,Functional
+The mobile app must allow students to assign a task to a user.,Functional
+The service must allow doctors to export data in CSV format.,Functional
+"The portal shall be available 200% of the time, excluding scheduled maintenance.",Non-Functional
+The service shall session-timeout inactive users after 90 minutes of inactivity.,Non-Functional
+The software shall permit auditors to update the quantity of a appointments in stock.,Functional
+The platform shall allow doctors to view the terms and conditions before registering.,Functional
+The portal must allow managers to update their profile information.,Functional
+The website shall handle at least 3 transactions per second during peak load.,Non-Functional
+The portal shall allow administrators to compare two or more files.,Functional
+The platform should allow students to close a resolved support ticket.,Functional
+The service shall session-timeout inactive users after 500 minutes of inactivity.,Non-Functional
+The website must allow managers to schedule an appointment with a employee.,Functional
+The platform should allow managers to update the quantity of a books in stock.,Functional
+"The system shall be available 24% of the time, excluding scheduled maintenance.",Non-Functional
+The website should allow sellers to add comments to a task.,Functional
+The software must allow managers to assign a task to a administrator.,Functional
+The website shall permit buyers to revoke access permissions from a auditor.,Functional
+The software should allow supervisors to revoke access permissions from a manager.,Functional
+The software shall permit supervisors to send a message to another customer.,Functional
+The software must allow buyers to receive a notification when an order is shipped.,Functional
+The software shall support seamless integration with third-party payment gateways.,Non-Functional
+The application shall enable students to add a new orders to the inventory.,Functional
+The platform shall support internationalization for at least 99.9 languages.,Non-Functional
+The website shall handle at least 2 transactions per second during peak load.,Non-Functional
+The mobile app shall support at least 99 concurrent users without performance degradation.,Non-Functional
+The system shall support at least 100 concurrent users without performance degradation.,Non-Functional
+The application should allow managers to add multiple items to a wishlist.,Functional
+The mobile app shall support internationalization for at least 100 languages.,Non-Functional
+The mobile app must allow users to make a payment using a credit card.,Functional
+The system shall enable administrators to delete a courses from the catalog.,Functional
+The platform shall session-timeout inactive users after 99 minutes of inactivity.,Non-Functional
+The system must allow administrators to receive a notification when an order is shipped.,Functional
+The software shall allow operators to receive a notification when a payment is received.,Functional
+The mobile app shall allow supervisors to sort books by price.,Functional
+The platform shall enable sellers to view frequently asked questions.,Functional
+The platform shall support internationalization for at least 100 languages.,Non-Functional
+The service must allow buyers to submit feedback about the system.,Functional
+The system shall permit users to generate a monthly summary report.,Functional
+The platform should allow auditors to search for appointments using keywords.,Functional
+The website shall enable auditors to close a resolved support ticket.,Functional
+The portal shall enable customers to cancel an existing order.,Functional
+The website must allow buyers to unsubscribe from email notifications.,Functional
+The system shall enable students to sort rooms by price.,Functional
+The software shall automatically back up data every 500 hours.,Non-Functional
+The application shall permit buyers to search for courses using keywords.,Functional
+The website shall enable administrators to submit a support ticket.,Functional
+The mobile app shall session-timeout inactive users after 99 minutes of inactivity.,Non-Functional
+The website must allow students to rate a rooms on a scale of 1 to 5.,Functional
+The website shall automatically back up data every 5 hours.,Non-Functional
+The software should allow sellers to share a medicines on social media.,Functional
+The website shall respond to user requests within 30 seconds under normal load.,Non-Functional
+The service shall enable supervisors to view a dashboard with key metrics.,Functional
+The mobile app shall allow customers to receive a notification when the stock is low.,Functional
+The software shall respond to user requests within 1000 seconds under normal load.,Non-Functional
+The portal shall permit managers to cancel an existing order.,Functional
+The portal should allow operators to update their profile information.,Functional
+"The service shall be available 90% of the time, excluding scheduled maintenance.",Non-Functional
+The software must allow patients to generate an invoice after purchase.,Functional
+The mobile app shall allow managers to revoke access permissions from a seller.,Functional
+The service shall enable operators to place an order for selected files.,Functional
+The website shall support internationalization for at least 1000 languages.,Non-Functional
+The website shall limit file upload size to 50 MB to prevent abuse.,Non-Functional
+The software should allow employees to restore a previously deactivated account.,Functional
+The mobile app shall enable students to remove books from the shopping cart.,Functional
+The application must allow managers to add a new appointments to the inventory.,Functional
+The service shall respond to user requests within 90 seconds under normal load.,Non-Functional
+The system must allow doctors to track the status of an order.,Functional
+The application should allow administrators to close a resolved support ticket.,Functional
+The mobile app must allow patients to enable two-factor authentication.,Functional
+The system should allow administrators to revoke access permissions from a buyer.,Functional
+The application shall enable buyers to assign a task to a agent.,Functional
+The website must allow administrators to deactivate their account.,Functional
+The software shall allow students to view order history.,Functional
+The mobile app must allow sellers to receive a notification when the stock is low.,Functional
+The service must allow auditors to make a payment using a digital wallet.,Functional
+The platform should allow students to reset application settings to default.,Functional
+The service shall allow administrators to remove services from the shopping cart.,Functional
+The portal shall provide clear error messages when an operation fails.,Non-Functional
+The software shall enable operators to reset their password via email verification.,Functional
+The mobile app shall permit sellers to update their profile information.,Functional
+The service shall enable agents to change their account password.,Functional
+The website shall automatically back up data every 200 hours.,Non-Functional
+The platform should allow auditors to delete a books from the catalog.,Functional
+The platform must allow guests to log out of the session securely.,Functional
+The platform must allow doctors to remove products from the shopping cart.,Functional
+The website shall recover from a system failure within 500 minutes.,Non-Functional
+The portal shall support at least 2 concurrent users without performance degradation.,Non-Functional
+The website shall permit guests to cancel a scheduled appointment.,Functional
+The mobile app shall enable customers to update their profile information.,Functional
+The platform should allow users to create a new project.,Functional
+The platform shall respond to user requests within 3 seconds under normal load.,Non-Functional
+The service shall enable guests to apply a discount coupon at checkout.,Functional
+"The service shall be available 10% of the time, excluding scheduled maintenance.",Non-Functional
+The platform shall session-timeout inactive users after 2 minutes of inactivity.,Non-Functional
+The software should allow agents to generate a monthly summary report.,Functional
+The application must allow doctors to make a payment using a digital wallet.,Functional
+The website should allow students to filter reports by category.,Functional
+The website shall allow administrators to reset application settings to default.,Functional
+The software shall recover from a system failure within 60 minutes.,Non-Functional
+The website shall allow administrators to filter vehicles by category.,Functional
+The website must allow doctors to sort files by price.,Functional
+The mobile app shall allow employees to make a payment using a credit card.,Functional
+The software should allow guests to restore a previously deactivated account.,Functional
+The mobile app shall permit customers to chat with a support agent in real time.,Functional
+The platform shall enable employees to grant role-based access to a supervisor.,Functional
+The service shall allow administrators to cancel an existing order.,Functional
+The service should allow customers to upload a profile picture.,Functional
+The platform shall permit employees to generate an invoice after purchase.,Functional
+The application must allow administrators to cancel a scheduled appointment.,Functional
+The service shall permit managers to add courses to the shopping cart.,Functional
+The service should allow agents to upload a profile picture.,Functional
+The mobile app shall enable customers to add a new vehicles to the inventory.,Functional
+The software shall respond to user requests within 10 seconds under normal load.,Non-Functional

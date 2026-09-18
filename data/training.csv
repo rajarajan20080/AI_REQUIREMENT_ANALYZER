@@ -1,0 +1,84 @@
+requirement_text,label
+The system shall allow users to register using their email address and password.,Functional
+The system shall allow users to log in using valid credentials.,Functional
+The system shall allow users to reset their password via email verification.,Functional
+The system shall allow administrators to add new products to the inventory.,Functional
+The system shall allow administrators to remove products from the inventory.,Functional
+The system shall allow customers to add items to a shopping cart.,Functional
+The system shall allow customers to remove items from a shopping cart.,Functional
+The system shall allow customers to checkout and complete a purchase.,Functional
+The system shall generate an invoice after a successful purchase.,Functional
+The system shall send an order confirmation email to the customer.,Functional
+The system shall allow users to update their profile information.,Functional
+The system shall allow users to upload a profile picture.,Functional
+The system shall allow managers to generate monthly sales reports.,Functional
+The system shall allow managers to export reports as CSV files.,Functional
+The system shall allow users to search for products by keyword.,Functional
+The system shall allow users to filter search results by category.,Functional
+The system shall allow users to sort search results by price.,Functional
+The system shall allow customers to leave a review for a purchased product.,Functional
+The system shall allow customers to rate a product from one to five stars.,Functional
+The system shall allow administrators to approve or reject product reviews.,Functional
+The system shall allow users to track the delivery status of an order.,Functional
+The system shall allow users to cancel an order before it is shipped.,Functional
+The system shall allow users to request a refund for a returned item.,Functional
+The system shall notify administrators when inventory falls below a threshold.,Functional
+The system shall allow users to add products to a wishlist.,Functional
+The system shall allow employees to clock in and clock out of shifts.,Functional
+The system shall allow HR staff to generate payroll reports.,Functional
+The system shall allow students to enroll in available courses.,Functional
+The system shall allow instructors to upload course materials.,Functional
+The system shall allow students to submit assignments online.,Functional
+The system shall allow instructors to grade submitted assignments.,Functional
+The system shall allow patients to schedule appointments with doctors.,Functional
+The system shall allow doctors to view a patient's medical history.,Functional
+The system shall allow pharmacists to update medication inventory.,Functional
+The system shall allow users to make payments using a credit card.,Functional
+The system shall allow users to make payments using digital wallets.,Functional
+The system shall allow administrators to create user roles and permissions.,Functional
+The system shall allow users to log out of their account.,Functional
+The system shall allow users to attach files to support tickets.,Functional
+The system shall allow support staff to respond to customer tickets.,Functional
+The system shall allow users to view their transaction history.,Functional
+The system shall allow drivers to accept or decline a delivery request.,Functional
+The system shall allow users to book a ride from their current location.,Functional
+The system shall allow restaurants to update their menu items.,Functional
+The system shall allow customers to place a food order from a restaurant menu.,Functional
+The system shall allow users to subscribe to a newsletter.,Functional
+The system shall allow users to unsubscribe from email notifications.,Functional
+The system shall allow admins to bulk import user data from a spreadsheet.,Functional
+The system shall allow users to share content on social media platforms.,Functional
+The system shall respond to user requests within 2 seconds for 95 percent of transactions.,Non-Functional
+The system shall be available 99.9 percent of the time excluding scheduled maintenance.,Non-Functional
+The system shall support up to 10000 concurrent users without performance degradation.,Non-Functional
+The system shall encrypt all sensitive data using AES-256 encryption.,Non-Functional
+The system shall comply with GDPR data protection regulations.,Non-Functional
+The user interface shall be intuitive and require no more than 30 minutes of training.,Non-Functional
+The system shall be able to scale horizontally to handle increased load.,Non-Functional
+The system shall recover from a failure within 5 minutes.,Non-Functional
+The system shall maintain a 99.99 percent uptime service level agreement.,Non-Functional
+The system shall log all user actions for auditing purposes.,Non-Functional
+The system shall support internationalization for at least five languages.,Non-Functional
+The system shall be accessible in accordance with WCAG 2.1 AA standards.,Non-Functional
+The system shall back up all data automatically every 24 hours.,Non-Functional
+The system shall restrict access to authorized users only through role-based access control.,Non-Functional
+The system shall use two-factor authentication for administrator accounts.,Non-Functional
+The mobile application shall be compatible with Android 10 and above.,Non-Functional
+The system shall process a minimum of 1000 transactions per second at peak load.,Non-Functional
+The system shall have a mean time to recovery of less than 10 minutes.,Non-Functional
+The system shall maintain data consistency across distributed database nodes.,Non-Functional
+"The system shall be portable across Windows, Linux, and macOS platforms.",Non-Functional
+The system shall degrade gracefully under high load conditions.,Non-Functional
+The system shall support automated regression testing for every release.,Non-Functional
+The system shall provide a response time of under 500 milliseconds for API calls.,Non-Functional
+"The system shall be maintainable with modular, well-documented source code.",Non-Functional
+The system shall ensure password data is never stored in plain text.,Non-Functional
+The system shall support secure communication using TLS 1.2 or higher.,Non-Functional
+The system shall handle a database of up to 50 million records efficiently.,Non-Functional
+The system shall be resilient to distributed denial-of-service attacks.,Non-Functional
+The user interface shall be responsive and adapt to different screen sizes.,Non-Functional
+The system shall provide 24x7 monitoring and alerting for critical services.,Non-Functional
+The system shall ensure interoperability with third-party payment gateways.,Non-Functional
+The system shall limit failed login attempts to 5 before locking the account.,Non-Functional
+The system shall support graceful degradation when third-party services are unavailable.,Non-Functional
+The system shall be compatible with screen readers for visually impaired users.,Non-Functional

@@ -1,0 +1,68 @@
+{
+  "categories": {
+    "Authorization": {
+      "keywords": ["authorization", "role-based", "permission", "access control", "privilege"],
+      "description": "The system shall enforce role-based access control to restrict functionality based on user permissions."
+    },
+    "Session Management": {
+      "keywords": ["session", "timeout", "logout", "auto-logout", "session expiry"],
+      "description": "The system shall manage user sessions securely, including automatic session timeout and logout."
+    },
+    "Data Backup": {
+      "keywords": ["backup", "recovery", "restore", "disaster recovery", "data loss"],
+      "description": "The system shall perform automated periodic backups of critical data and support recovery in case of failure."
+    },
+    "Performance": {
+      "keywords": ["performance", "response time", "throughput", "latency", "load time"],
+      "description": "The system shall meet defined performance benchmarks for response time and throughput under expected load."
+    },
+    "Security": {
+      "keywords": ["security", "encryption", "encrypt", "secure", "vulnerability", "authentication"],
+      "description": "The system shall protect sensitive data using industry-standard encryption and security best practices."
+    },
+    "Usability": {
+      "keywords": ["usability", "user-friendly", "intuitive", "ease of use", "user experience"],
+      "description": "The system shall provide an intuitive and user-friendly interface that minimizes user training time."
+    },
+    "Scalability": {
+      "keywords": ["scalability", "scale", "scalable", "elastic", "horizontal scaling"],
+      "description": "The system shall be able to scale to accommodate growth in users and data volume."
+    },
+    "Data Validation": {
+      "keywords": ["validation", "validate", "input validation", "data integrity", "sanitize"],
+      "description": "The system shall validate all user input to ensure data integrity and prevent invalid submissions."
+    },
+    "Accessibility": {
+      "keywords": ["accessibility", "wcag", "screen reader", "disabilities", "accessible"],
+      "description": "The system shall comply with accessibility standards such as WCAG to support users with disabilities."
+    },
+    "Internationalization": {
+      "keywords": ["internationalization", "localization", "multi-language", "language support", "locale"],
+      "description": "The system shall support multiple languages and regional formats for internationalization."
+    },
+    "Compliance": {
+      "keywords": ["compliance", "gdpr", "hipaa", "regulatory", "legal requirement"],
+      "description": "The system shall comply with applicable legal and regulatory requirements such as GDPR or HIPAA."
+    },
+    "API Integration": {
+      "keywords": ["api", "integration", "third-party", "webhook", "interface with"],
+      "description": "The system shall support integration with third-party services through well-defined APIs."
+    },
+    "Monitoring": {
+      "keywords": ["monitoring", "alert", "logging", "health check", "uptime"],
+      "description": "The system shall provide monitoring and alerting mechanisms to track system health and availability."
+    },
+    "Data Retention": {
+      "keywords": ["retention", "archival", "archive", "data lifecycle", "purge"],
+      "description": "The system shall define and enforce data retention and archival policies for stored data."
+    },
+    "Error Handling": {
+      "keywords": ["error message", "error handling", "exception", "failure notification"],
+      "description": "The system shall provide clear and appropriate error messages to guide users when operations fail."
+    },
+    "Reporting": {
+      "keywords": ["report", "export", "analytics", "dashboard", "statistics"],
+      "description": "The system shall provide reporting capabilities allowing authorized users to generate and export data reports."
+    }
+  }
+}

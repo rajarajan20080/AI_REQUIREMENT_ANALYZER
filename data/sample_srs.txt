@@ -1,0 +1,26 @@
+Software Requirement Specification - Online Bookstore System
+
+1. The system shall allow users to register using their email address and password.
+2. The system shall allow users to log in using valid credentials.
+3. The system shall allow customers to search for books by title, author, or ISBN.
+4. The system shall allow customers to add books to a shopping cart.
+5. The system shall allow customers to remove books from a shopping cart.
+6. The system shall allow customers to checkout and complete a purchase.
+7. The system shall allow customers to make payments using a credit card.
+8. The system shall send an order confirmation email to the customer.
+9. The system shall allow customers to track the delivery status of an order.
+10. The system shall allow administrators to add new books to the catalog.
+11. The system shall allow administrators to remove books from the catalog.
+12. The system shall allow administrators to generate monthly sales reports.
+13. The system shall allow customers to leave a review for a purchased book.
+14. The system shall allow customers to rate a book from one to five stars.
+15. The system should be user-friendly and easy to use for all customers.
+16. The system shall be fast and responsive under normal conditions.
+17. The system shall handle a reasonably large number of users efficiently.
+18. The system shall allow customers to add books to a shopping cart for later purchase.
+19. The system shall allow customers to add books to a wishlist for future purchase.
+20. The system shall provide appropriate error messages when something goes wrong.
+21. The system shall allow customers to update their profile information.
+22. The system shall allow customers to view their transaction history.
+23. The system shall support a flexible and scalable architecture as needed.
+24. The system shall allow administrators to approve or reject customer reviews.

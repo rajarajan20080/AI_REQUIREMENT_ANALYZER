@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Based Software Requirement Analyzer — Enterprise SRS Intelligence</title>
+    <meta name="description" content="Commercial-grade AI platform for Software Requirements Specification analysis, ambiguity detection, semantic duplicate elimination, and quality scoring.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Chart.js for interactive analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="#landing" class="nav-brand" data-nav="landing">
+                    <div class="brand-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-title">ReqAnalyzer<span class="gradient-text">.AI</span></span>
+                        <span class="brand-badge">PRO v2.0</span>
+                    </div>
+                </a>
+                <button class="sidebar-toggle-mobile" id="mobile-menu-close" aria-label="Close menu">✕</button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">PLATFORM</div>
+                <a href="#landing" class="nav-item active" data-nav="landing">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span>Overview & Home</span>
+                </a>
+                <a href="#dashboard" class="nav-item" data-nav="dashboard">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                    <span>Global Dashboard</span>
+                </a>
+                <a href="#analyze" class="nav-item" data-nav="analyze">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <span>Analyze SRS Workspace</span>
+                    <span class="badge-pulse">New</span>
+                </a>
+
+                <div class="nav-section-title active-analysis-section hidden" id="analysis-nav-header">ACTIVE ANALYSIS</div>
+                <a href="#results" class="nav-item active-analysis-item hidden" data-nav="results">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                    <span>Results Hub</span>
+                </a>
+                <a href="#requirements" class="nav-item active-analysis-item hidden" data-nav="requirements">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    <span>Requirements Explorer</span>
+                </a>
+                <a href="#ambiguity" class="nav-item active-analysis-item hidden" data-nav="ambiguity">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span>Ambiguity Inspector</span>
+                    <span class="badge warning-badge" id="sidebar-ambiguity-count">0</span>
+                </a>
+                <a href="#duplicates" class="nav-item active-analysis-item hidden" data-nav="duplicates">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                    <span>Duplicate Overlaps</span>
+                    <span class="badge info-badge" id="sidebar-duplicate-count">0</span>
+                </a>
+                <a href="#missing" class="nav-item active-analysis-item hidden" data-nav="missing">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    <span>Missing Requirements</span>
+                </a>
+                <a href="#complexity" class="nav-item active-analysis-item hidden" data-nav="complexity">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <span>Complexity Analysis</span>
+                </a>
+                <a href="#quality" class="nav-item active-analysis-item hidden" data-nav="quality">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                    <span>Quality Scoring</span>
+                </a>
+                <a href="#report" class="nav-item active-analysis-item hidden" data-nav="report">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    <span>Export & Report</span>
+                </a>
+
+                <div class="nav-section-title">STORAGE & AUDIT</div>
+                <a href="#history" class="nav-item" data-nav="history">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Analysis History</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="engine-status">
+                    <div class="status-indicator online"></div>
+                    <div class="status-info">
+                        <span class="status-title">NLP Engine Active</span>
+                        <span class="status-subtitle">TF-IDF + MiniLM + spaCy</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <div class="nav-left">
+                    <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+                    </button>
+                    <div class="page-breadcrumb">
+                        <span class="breadcrumb-root">Platform</span>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current" id="current-page-title">Overview</span>
+                    </div>
+                </div>
+
+                <div class="nav-right">
+                    <div class="active-doc-badge hidden" id="top-doc-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        <span id="top-doc-name">Document</span>
+                    </div>
+                    <button class="btn btn-secondary btn-sm" id="top-sample-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+                        Load Sample SRS
+                    </button>
+                    <button class="btn btn-primary btn-sm" id="top-analyze-cta">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        Analyze Document
+                    </button>
+                </div>
+            </header>
+
+            <!-- Page Views Container -->
+            <main class="content-container">
+
+                <!-- 1. LANDING / HERO VIEW -->
+                <section class="page-view active" id="view-landing">
+                    <div class="hero-section">
+                        <div class="hero-glow"></div>
+                        <div class="hero-badge">
+                            <span class="badge-sparkle">✨</span>
+                            <span>Next-Generation Requirement Engineering Intelligence</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Detect SRS Defects <br>
+                            <span class="gradient-text">Before Coding Begins</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Empower engineering teams with deep NLP text classification, semantic duplicate detection,
+                            measurable ambiguity resolution, and comprehensive IEEE 830 quality scoring.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary btn-lg" id="landing-get-started-btn">
+                                <span>Get Started Now</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </button>
+                            <button class="btn btn-glass btn-lg" id="landing-load-sample-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                <span>Test with Hospital SRS</span>
+                            </button>
+                        </div>
+
+                        <!-- Hero Live Showcase Terminal / Card -->
+                        <div class="hero-terminal glass-panel">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <span class="terminal-title">srs_ai_pipeline_inspector.py</span>
+                                <span class="terminal-status">LIVE NLP ENGINE</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line"><span class="t-prompt">$</span> reqanalyzer analyze --input hospital_srs.docx</div>
+                                <div class="terminal-line t-info">[1/8] Parsing document: 25 requirement statements extracted</div>
+                                <div class="terminal-line t-info">[2/8] Running spaCy tokenization and lemmatization pipeline</div>
+                                <div class="terminal-line t-success">[3/8] TF-IDF Logistic Regression: 18 Functional (94.2%), 7 Non-Functional (91.8%)</div>
+                                <div class="terminal-line t-warning">[4/8] Ambiguity Engine: 4 subjective terms identified ('quickly', 'user-friendly', 'secure')</div>
+                                <div class="terminal-line t-warning">[5/8] Sentence Transformers (all-MiniLM-L6-v2): 2 potential duplicate pairs (94.1% cosine similarity)</div>
+                                <div class="terminal-line t-info">[6/8] Knowledge Base Gap Analysis: 2 missing domain categories (Session Management, Data Backup)</div>
+                                <div class="terminal-line t-success">[7/8] Quality Assessment: 87.4 / 100 [Production Ready] | Complexity: Medium</div>
+                                <div class="terminal-line t-highlight">✓ Full interactive dashboard ready. All metrics verified against active ML model.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Features Pillars -->
+                    <div class="features-section">
+                        <div class="section-heading text-center">
+                            <h2 class="section-title">Built for Enterprise Software Engineering</h2>
+                            <p class="section-subtitle">Real ML algorithms engineered to catch software specification flaws early.</p>
+                        </div>
+                        <div class="features-grid">
+                            <div class="feature-card glass-panel">
+                                <div class="feature-icon bg-indigo">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                </div>
+                                <h3>FR / NFR Classification</h3>
+                                <p>Trained TF-IDF vectorizer and balanced Logistic Regression classifier predicting exact category with probabilistic confidence.</p>
+                            </div>
+
+                            <div class="feature-card glass-panel">
+                                <div class="feature-icon bg-amber">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </div>
+                                <h3>Deep Ambiguity Detection</h3>
+                                <p>Catches vague qualitative terms ('quickly', 'adequate', 'user-friendly') and generates quantitative rewrite templates.</p>
+                            </div>
+
+                            <div class="feature-card glass-panel">
+                                <div class="feature-icon bg-blue">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <h3>Semantic Duplicate Elimination</h3>
+                                <p>Dense sentence embeddings using Sentence Transformers to compute pairwise cosine distances and pinpoint overlapping clauses.</p>
+                            </div>
+
+                            <div class="feature-card glass-panel">
+                                <div class="feature-icon bg-cyan">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                </div>
+                                <h3>Missing Requirement Guidance</h3>
+                                <p>Knowledge base domain gap analysis identifying missing security, backup, session, and audit requirements.</p>
+                            </div>
+
+                            <div class="feature-card glass-panel">
+                                <div class="feature-icon bg-violet">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                                </div>
+                                <h3>6-Dimension Quality Engine</h3>
+                                <p>Rigorous mathematical scoring across Clarity, Completeness, Consistency, Specificity, Testability, and Ambiguity penalty.</p>
+                            </div>
+
+                            <div class="feature-card glass-panel">
+                                <div class="feature-icon bg-emerald">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                </div>
+                                <h3>Multi-Factor Complexity</h3>
+                                <p>Heuristic normalized model evaluating size, non-functional proportion, ambiguity, and domain gaps to calculate overall project complexity.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How It Works Flow -->
+                    <div class="workflow-section glass-panel">
+                        <div class="section-heading text-center">
+                            <h2 class="section-title">End-to-End Analysis Pipeline</h2>
+                            <p class="section-subtitle">Real NLP architecture processing software requirements specifications in seconds.</p>
+                        </div>
+                        <div class="pipeline-flow">
+                            <div class="flow-step">
+                                <div class="flow-number">01</div>
+                                <h4>Document Ingestion</h4>
+                                <p>Upload .pdf, .docx, .txt or paste raw text.</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-number">02</div>
+                                <h4>NLP Tokenization</h4>
+                                <p>spaCy lemmatization and sentence segmentation.</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-number">03</div>
+                                <h4>ML Classification</h4>
+                                <p>TF-IDF + Logistic Regression classification.</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-number">04</div>
+                                <h4>Semantic & Quality Scoring</h4>
+                                <p>Embeddings, ambiguity checks, & report generation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. GLOBAL DASHBOARD VIEW -->
+                <section class="page-view" id="view-dashboard">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Executive Analytics Dashboard</h2>
+                            <p class="view-subtitle">Aggregate metrics across all historical SRS document analyses in the database.</p>
+                        </div>
+                        <button class="btn btn-primary" data-nav="analyze">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            New SRS Analysis
+                        </button>
+                    </div>
+
+                    <!-- Summary KPI Cards -->
+                    <div class="kpi-grid">
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-icon-wrap bg-blue-subtle">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+                            </div>
+                            <div class="kpi-content">
+                                <span class="kpi-label">Total Documents Analyzed</span>
+                                <span class="kpi-value" id="dash-total-docs">0</span>
+                                <span class="kpi-subtext">Stored in SQLite archive</span>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-icon-wrap bg-indigo-subtle">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                            </div>
+                            <div class="kpi-content">
+                                <span class="kpi-label">Total Requirements Processed</span>
+                                <span class="kpi-value" id="dash-total-reqs">0</span>
+                                <span class="kpi-subtext"><span id="dash-func-reqs">0</span> FR / <span id="dash-nfr-reqs">0</span> NFR</span>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-icon-wrap bg-emerald-subtle">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <div class="kpi-content">
+                                <span class="kpi-label">Average Quality Score</span>
+                                <span class="kpi-value gradient-text" id="dash-avg-quality">0.0</span>
+                                <span class="kpi-subtext">Out of 100 quality benchmark</span>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-icon-wrap bg-amber-subtle">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            </div>
+                            <div class="kpi-content">
+                                <span class="kpi-label">Average AI Confidence</span>
+                                <span class="kpi-value" id="dash-avg-conf">0.0%</span>
+                                <span class="kpi-subtext">Model certainty rating</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Charts & Recent Analyses -->
+                    <div class="dashboard-split-grid">
+                        <div class="glass-panel chart-card">
+                            <div class="card-header-clean">
+                                <h3>Functional vs Non-Functional Distribution</h3>
+                                <span class="badge info-badge">Historical Breakdown</span>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="global-dist-chart" height="220"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel table-card">
+                            <div class="card-header-clean">
+                                <h3>Recent SRS Analyses</h3>
+                                <button class="btn btn-ghost btn-sm" data-nav="history">View All →</button>
+                            </div>
+                            <div class="table-container">
+                                <table class="custom-table" id="dashboard-recent-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Document</th>
+                                            <th>Date</th>
+                                            <th>Reqs</th>
+                                            <th>Quality</th>
+                                            <th>Complexity</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dashboard-recent-tbody">
+                                        <tr><td colspan="6" class="text-center text-muted">No analyses in database yet. Run an analysis to see history!</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. ANALYZE SRS WORKSPACE VIEW -->
+                <section class="page-view" id="view-analyze">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Analyze SRS Workspace</h2>
+                            <p class="view-subtitle">Upload your specification document or directly paste requirements text.</p>
+                        </div>
+                    </div>
+
+                    <div class="workspace-grid">
+                        <!-- Left Workspace: Input Controls -->
+                        <div class="workspace-input-col">
+                            <!-- Dual Mode Input Tabs -->
+                            <div class="glass-panel">
+                                <div class="workspace-tabs">
+                                    <button class="ws-tab-btn active" id="tab-btn-upload" data-tab="upload-panel">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                        Upload Document File
+                                    </button>
+                                    <button class="ws-tab-btn" id="tab-btn-text" data-tab="text-panel">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/></svg>
+                                        Direct Text Editor
+                                    </button>
+                                </div>
+
+                                <!-- Tab 1: File Upload -->
+                                <div class="ws-tab-content active" id="upload-panel">
+                                    <div class="drop-zone" id="file-drop-zone">
+                                        <div class="drop-zone-icon">
+                                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                        </div>
+                                        <h3 class="drop-zone-title">Drag & drop your SRS document or dataset here</h3>
+                                        <p class="drop-zone-desc">Supports PDF (.pdf), Word (.docx), Plain Text (.txt), CSV (.csv), Excel (.xlsx, .xls), JSON/JSONL (.json, .jsonl), and Markdown (.md)</p>
+                                        <div class="format-badges" style="display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin: 10px 0 14px 0;">
+                                            <span class="badge" style="background:rgba(99,102,241,0.15); color:#818cf8; font-size:11px; padding:3px 8px; border-radius:6px; border:1px solid rgba(99,102,241,0.3);">.CSV</span>
+                                            <span class="badge" style="background:rgba(16,185,129,0.15); color:#34d399; font-size:11px; padding:3px 8px; border-radius:6px; border:1px solid rgba(16,185,129,0.3);">.XLSX / .XLS</span>
+                                            <span class="badge" style="background:rgba(245,158,11,0.15); color:#fbbf24; font-size:11px; padding:3px 8px; border-radius:6px; border:1px solid rgba(245,158,11,0.3);">.JSON / .JSONL</span>
+                                            <span class="badge" style="background:rgba(236,72,153,0.15); color:#f472b6; font-size:11px; padding:3px 8px; border-radius:6px; border:1px solid rgba(236,72,153,0.3);">.PDF</span>
+                                            <span class="badge" style="background:rgba(59,130,246,0.15); color:#60a5fa; font-size:11px; padding:3px 8px; border-radius:6px; border:1px solid rgba(59,130,246,0.3);">.DOCX</span>
+                                            <span class="badge" style="background:rgba(148,163,184,0.15); color:#cbd5e1; font-size:11px; padding:3px 8px; border-radius:6px; border:1px solid rgba(148,163,184,0.3);">.TXT / .MD</span>
+                                        </div>
+                                        <button class="btn btn-secondary btn-sm" id="browse-files-btn">Browse Local Files</button>
+                                        <input type="file" id="real-file-input" accept=".txt,.docx,.pdf,.csv,.xlsx,.xls,.json,.jsonl,.md,.markdown" class="hidden">
+                                    </div>
+                                    <div class="selected-file-display hidden" id="selected-file-bar">
+                                        <div class="file-icon-badge">📄</div>
+                                        <div class="file-meta">
+                                            <span class="file-name" id="selected-file-name">filename.docx</span>
+                                            <span class="file-size" id="selected-file-size">0 KB</span>
+                                        </div>
+                                        <button class="btn-clear-file" id="clear-selected-file" aria-label="Remove selected file">✕</button>
+                                    </div>
+                                </div>
+
+                                <!-- Tab 2: Text Editor -->
+                                <div class="ws-tab-content" id="text-panel">
+                                    <div class="text-editor-container">
+                                        <div class="editor-header">
+                                            <input type="text" id="srs-title-input" class="editor-title-field" placeholder="Project / SRS Title (Optional)..." value="Custom Software Specification">
+                                            <div class="editor-actions">
+                                                <button class="btn btn-ghost btn-xs" id="editor-load-sample-btn">
+                                                    <span>Paste Sample</span>
+                                                </button>
+                                                <button class="btn btn-ghost btn-xs" id="editor-clear-btn">
+                                                    <span>Clear</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <textarea id="srs-raw-textarea" class="srs-textarea" placeholder="Paste your SRS requirements here...&#10;&#10;Example:&#10;1. The system shall authenticate users with email and password.&#10;2. The application should respond quickly.&#10;3. Users must log in using credentials." rows="14"></textarea>
+                                        <div class="editor-footer">
+                                            <span id="editor-line-count">0 lines</span>
+                                            <span id="editor-word-count">0 words</span>
+                                            <span id="editor-char-count">0 characters</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="workspace-submit-row">
+                                    <button class="btn btn-primary btn-lg btn-block" id="start-analysis-btn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                        <span>Run AI Requirement Analysis</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Workspace: Guidelines & Pipeline Details -->
+                        <div class="workspace-info-col">
+                            <div class="glass-panel info-card mb-4">
+                                <div class="card-header-clean">
+                                    <h3>Analysis Engine Modules</h3>
+                                    <span class="badge success-badge">Ready</span>
+                                </div>
+                                <ul class="checklist-items">
+                                    <li>
+                                        <span class="check-icon">✓</span>
+                                        <div>
+                                            <strong>FR/NFR Classification:</strong>
+                                            <p class="text-muted text-xs">TF-IDF Vectorizer + Balanced Logistic Regression model trained on PROMISE corpus.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="check-icon">✓</span>
+                                        <div>
+                                            <strong>Ambiguity Heuristics:</strong>
+                                            <p class="text-muted text-xs">Evaluates subjective modifiers ('quickly', 'user-friendly', 'adequate', 'etc').</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="check-icon">✓</span>
+                                        <div>
+                                            <strong>Sentence Transformers Embeddings:</strong>
+                                            <p class="text-muted text-xs">Pairwise cosine similarity matrix to flag near-duplicate requirement clauses.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="check-icon">✓</span>
+                                        <div>
+                                            <strong>Knowledge Base Gap Detection:</strong>
+                                            <p class="text-muted text-xs">Validates 22 architectural categories (Auth, Security, Backup, Logging, Audit).</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="glass-panel info-card">
+                                <h3>Quick Demo</h3>
+                                <p class="text-muted text-sm mb-3">Don't have an SRS document ready? Test the full workflow with our built-in Hospital Management System specification.</p>
+                                <button class="btn btn-secondary btn-block" id="quick-demo-btn">
+                                    Load Sample & Analyze Instantly
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. RESULTS DASHBOARD VIEW -->
+                <section class="page-view" id="view-results">
+                    <div class="view-header">
+                        <div>
+                            <div class="doc-title-row">
+                                <h2 class="view-title" id="results-doc-title">Document Analysis Results</h2>
+                                <span class="badge" id="results-complexity-badge">Complexity: Medium</span>
+                                <span class="badge" id="results-quality-badge">Quality: Good</span>
+                            </div>
+                            <p class="view-subtitle" id="results-doc-subtitle">Detailed AI inspection report and breakdown.</p>
+                        </div>
+                        <div class="header-action-group">
+                            <button class="btn btn-secondary btn-sm" data-nav="report">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Export Report
+                            </button>
+                            <button class="btn btn-primary btn-sm" data-nav="analyze">
+                                Analyze Another
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Top KPI Metric Cards (10 Cards) -->
+                    <div class="results-kpi-grid">
+                        <div class="results-kpi-card glass-panel" data-nav="requirements">
+                            <div class="kpi-mini-label">Total Requirements</div>
+                            <div class="kpi-big-value" id="res-total-reqs">0</div>
+                            <div class="kpi-foot-info">Statements Extracted</div>
+                        </div>
+
+                        <div class="results-kpi-card glass-panel" data-nav="requirements">
+                            <div class="kpi-mini-label">Functional (FR)</div>
+                            <div class="kpi-big-value text-emerald" id="res-func-reqs">0</div>
+                            <div class="kpi-foot-info" id="res-func-pct">0% of total</div>
+                        </div>
+
+                        <div class="results-kpi-card glass-panel" data-nav="requirements">
+                            <div class="kpi-mini-label">Non-Functional (NFR)</div>
+                            <div class="kpi-big-value text-amber" id="res-nfr-reqs">0</div>
+                            <div class="kpi-foot-info" id="res-nfr-pct">0% of total</div>
+                        </div>
+
+                        <div class="results-kpi-card glass-panel" data-nav="ambiguity">
+                            <div class="kpi-mini-label">Ambiguous Statements</div>
+                            <div class="kpi-big-value text-rose" id="res-amb-reqs">0</div>
+                            <div class="kpi-foot-info" id="res-amb-pct">0% flagged</div>
+                        </div>
+
+                        <div class="results-kpi-card glass-panel" data-nav="duplicates">
+                            <div class="kpi-mini-label">Duplicate Pairs</div>
+                            <div class="kpi-big-value text-indigo" id="res-dup-pairs">0</div>
+                            <div class="kpi-foot-info" id="res-dup-pct">0% overlap</div>
+                        </div>
+
+                        <div class="results-kpi-card glass-panel" data-nav="missing">
+                            <div class="kpi-mini-label">Missing Domains</div>
+                            <div class="kpi-big-value text-cyan" id="res-missing-count">0</div>
+                            <div class="kpi-foot-info">AI Recommendations</div>
+                        </div>
+
+                        <div class="results-kpi-card glass-panel" data-nav="quality">
+                            <div class="kpi-mini-label">Overall Quality Score</div>
+                            <div class="kpi-big-value gradient-text" id="res-quality-score">0.0</div>
+                            <div class="kpi-foot-info" id="res-quality-tier">Rating</div>
+                        </div>
+
+                        <div class="results-kpi-card glass-panel" data-nav="quality">
+                            <div class="kpi-mini-label">Completeness Score</div>
+                            <div class="kpi-big-value text-cyan" id="res-completeness-score">0.0%</div>
+                            <div class="kpi-foot-info">Coverage Index</div>
+                        </div>
+
+                        <div class="results-kpi-card glass-panel" data-nav="complexity">
+                            <div class="kpi-mini-label">Project Complexity</div>
+                            <div class="kpi-big-value text-amber" id="res-complexity-level">Medium</div>
+                            <div class="kpi-foot-info" id="res-complexity-score">Score: 0/100</div>
+                        </div>
+
+                        <div class="results-kpi-card glass-panel">
+                            <div class="kpi-mini-label">Avg AI Confidence</div>
+                            <div class="kpi-big-value text-emerald" id="res-avg-confidence">0.0%</div>
+                            <div class="kpi-foot-info">Probabilistic Mean</div>
+                        </div>
+                    </div>
+
+                    <!-- Charts & Insights Row -->
+                    <div class="results-insights-grid">
+                        <div class="glass-panel chart-card">
+                            <div class="card-header-clean">
+                                <h3>Classification & Ambiguity Breakdown</h3>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="results-dist-chart" height="200"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel chart-card">
+                            <div class="card-header-clean">
+                                <h3>Quality Dimension Radar</h3>
+                                <button class="btn btn-ghost btn-xs" data-nav="quality">Details →</button>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="results-quality-radar" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Navigation Banners -->
+                    <div class="quick-nav-cards-grid">
+                        <div class="nav-banner-card glass-panel" data-nav="requirements">
+                            <div class="banner-icon">📋</div>
+                            <div class="banner-body">
+                                <h4>Inspect Requirements Table</h4>
+                                <p>Search, filter, and review classifications, confidence scores, and individual requirement metrics.</p>
+                            </div>
+                            <span class="banner-arrow">→</span>
+                        </div>
+
+                        <div class="nav-banner-card glass-panel" data-nav="ambiguity">
+                            <div class="banner-icon">⚠️</div>
+                            <div class="banner-body">
+                                <h4>Review Ambiguous Phrases</h4>
+                                <p>Examine flagged terms, linguistic explanations, and suggested measurable rewrites.</p>
+                            </div>
+                            <span class="banner-arrow">→</span>
+                        </div>
+
+                        <div class="nav-banner-card glass-panel" data-nav="duplicates">
+                            <div class="banner-icon">👥</div>
+                            <div class="banner-body">
+                                <h4>Eliminate Duplicate Overlaps</h4>
+                                <p>Compare near-duplicate requirement pairs side-by-side using sentence embeddings.</p>
+                            </div>
+                            <span class="banner-arrow">→</span>
+                        </div>
+
+                        <div class="nav-banner-card glass-panel" data-nav="missing">
+                            <div class="banner-icon">💡</div>
+                            <div class="banner-body">
+                                <h4>Explore Missing Recommendations</h4>
+                                <p>Review domain gap analysis across security, authentication, backups, and audit trails.</p>
+                            </div>
+                            <span class="banner-arrow">→</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. REQUIREMENTS EXPLORER TABLE VIEW -->
+                <section class="page-view" id="view-requirements">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Requirements Inventory & Explorer</h2>
+                            <p class="view-subtitle">Search, filter, sort, and inspect every extracted requirement statement.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel table-filter-card">
+                        <div class="filter-controls-row">
+                            <div class="search-box-wrap">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                <input type="text" id="req-search-input" class="search-input" placeholder="Search requirements by keyword or ID...">
+                            </div>
+
+                            <div class="filter-dropdowns">
+                                <select id="filter-classification" class="custom-select">
+                                    <option value="ALL">All Types (FR & NFR)</option>
+                                    <option value="Functional">Functional Requirements</option>
+                                    <option value="Non-Functional">Non-Functional Requirements</option>
+                                </select>
+
+                                <select id="filter-ambiguity" class="custom-select">
+                                    <option value="ALL">All Ambiguity States</option>
+                                    <option value="AMBIGUOUS">⚠️ Ambiguous Only</option>
+                                    <option value="CLEAR">✅ Clear Only</option>
+                                </select>
+
+                                <select id="filter-quality" class="custom-select">
+                                    <option value="ALL">All Quality Ratings</option>
+                                    <option value="Excellent">Excellent (>=85)</option>
+                                    <option value="Good">Good (70-84)</option>
+                                    <option value="Needs Improvement">Needs Improvement (&lt;70)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="custom-table" id="main-req-table">
+                                <thead>
+                                    <tr>
+                                        <th width="100" class="sortable" data-sort="id">ID ↕</th>
+                                        <th>Requirement Statement</th>
+                                        <th width="140" class="sortable" data-sort="label">Classification ↕</th>
+                                        <th width="110" class="sortable" data-sort="confidence">Confidence ↕</th>
+                                        <th width="130" class="sortable" data-sort="ambiguity">Ambiguity ↕</th>
+                                        <th width="110" class="sortable" data-sort="quality">Quality ↕</th>
+                                        <th width="90" class="text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="main-req-tbody">
+                                    <!-- Populated dynamically via script.js -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="table-pagination-row">
+                            <div class="pagination-info" id="req-pagination-info">Showing 0 of 0 requirements</div>
+                            <div class="pagination-buttons">
+                                <button class="btn btn-secondary btn-xs" id="req-prev-page-btn" disabled>Previous</button>
+                                <span class="current-page-badge" id="req-current-page">1</span>
+                                <button class="btn btn-secondary btn-xs" id="req-next-page-btn" disabled>Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. AMBIGUITY INSPECTOR VIEW -->
+                <section class="page-view" id="view-ambiguity">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Ambiguity Detection & Resolution</h2>
+                            <p class="view-subtitle">Identify non-measurable, vague, and subjective requirements with AI suggested rewrites.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ambiguity Overview Metrics -->
+                    <div class="kpi-grid mb-4">
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">Total Ambiguous Statements</div>
+                            <div class="kpi-big-value text-rose" id="amb-total-count">0</div>
+                            <div class="kpi-subtext" id="amb-percentage-badge">0.0% of document</div>
+                        </div>
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">High Severity Defects</div>
+                            <div class="kpi-big-value text-rose" id="amb-high-severity">0</div>
+                            <div class="kpi-subtext">Requires immediate rewrite</div>
+                        </div>
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">Medium Severity</div>
+                            <div class="kpi-big-value text-amber" id="amb-med-severity">0</div>
+                            <div class="kpi-subtext">Subjective adjectives</div>
+                        </div>
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">Clear / Non-Ambiguous</div>
+                            <div class="kpi-big-value text-emerald" id="amb-clear-count">0</div>
+                            <div class="kpi-subtext">Meets precision criteria</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel mb-4">
+                        <div class="card-header-clean">
+                            <h3>Frequent Ambiguous Terms Detected</h3>
+                        </div>
+                        <div class="term-chips-container" id="amb-term-chips">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="glass-panel">
+                        <div class="card-header-clean">
+                            <h3>Ambiguity Inspection Cards</h3>
+                            <span class="text-muted text-sm" id="amb-cards-subtitle">Flagged requirements with problem explanation & improvement suggestion</span>
+                        </div>
+                        <div class="ambiguity-cards-list" id="ambiguity-cards-container">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. DUPLICATE DETECTOR VIEW -->
+                <section class="page-view" id="view-duplicates">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Semantic Duplicate & Overlap Analysis</h2>
+                            <p class="view-subtitle">Sentence Transformers cosine distance analysis identifying redundant or overlapping requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="kpi-grid mb-4">
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">Duplicate Pairs Detected</div>
+                            <div class="kpi-big-value text-indigo" id="dup-pairs-count">0</div>
+                            <div class="kpi-subtext">Cosine similarity >= 80%</div>
+                        </div>
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">Overlap Ratio</div>
+                            <div class="kpi-big-value text-amber" id="dup-ratio-val">0.0%</div>
+                            <div class="kpi-subtext">Requirements involved in duplicate pairs</div>
+                        </div>
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">Embedding Model</div>
+                            <div class="kpi-big-value" style="font-size: 1.3rem;">all-MiniLM-L6-v2</div>
+                            <div class="kpi-subtext">384-dimensional dense semantic vectors</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel">
+                        <div class="card-header-clean">
+                            <h3>Detected Duplicate & Overlapping Pairs</h3>
+                            <span class="text-muted text-sm">Side-by-side comparison with semantic similarity percentage</span>
+                        </div>
+                        <div class="duplicate-pairs-list" id="duplicate-pairs-container">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 8. MISSING REQUIREMENTS VIEW -->
+                <section class="page-view" id="view-missing">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Domain Coverage & Missing Requirements</h2>
+                            <p class="view-subtitle">Knowledge base comparison identifying potentially missing architectural, security, and operational requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="kpi-grid mb-4">
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">Domain Coverage Score</div>
+                            <div class="kpi-big-value text-cyan" id="missing-coverage-pct">0.0%</div>
+                            <div class="kpi-subtext" id="missing-coverage-sub">0 of 22 categories covered</div>
+                        </div>
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">Missing Category Recommendations</div>
+                            <div class="kpi-big-value text-amber" id="missing-recommendations-count">0</div>
+                            <div class="kpi-subtext">Categories without keyword matches</div>
+                        </div>
+                        <div class="kpi-card glass-panel">
+                            <div class="kpi-mini-label">High Priority Gaps</div>
+                            <div class="kpi-big-value text-rose" id="missing-high-prio-count">0</div>
+                            <div class="kpi-subtext">Authentication, Security, Backup</div>
+                        </div>
+                    </div>
+
+                    <div class="alert-banner info-alert mb-4">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        <div>
+                            <strong>AI Recommendations Notice:</strong>
+                            These suggestions represent standard software engineering domain categories that were not detected in your specification. Use them as guidance to evaluate whether supporting requirements are needed.
+                        </div>
+                    </div>
+
+                    <div class="glass-panel">
+                        <div class="card-header-clean">
+                            <h3>Domain Categories & AI Recommendations</h3>
+                        </div>
+                        <div class="missing-categories-grid" id="missing-categories-container">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. COMPLEXITY VIEW -->
+                <section class="page-view" id="view-complexity">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Project Complexity Analysis</h2>
+                            <p class="view-subtitle">Heuristic multi-factor complexity scoring based on requirement volume, NFR scope, ambiguity, and domain gaps.</p>
+                        </div>
+                    </div>
+
+                    <div class="complexity-hero glass-panel mb-4">
+                        <div class="complexity-tier-badge" id="comp-tier-badge">Medium Complexity</div>
+                        <div class="complexity-score-display">
+                            <span class="comp-score-num" id="comp-score-number">52.4</span>
+                            <span class="comp-score-max">/ 100</span>
+                        </div>
+                        <p class="complexity-summary-p" id="comp-explanation-text">
+                            Moderate complexity project based on multi-factor weighted scoring.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel mb-4">
+                        <div class="card-header-clean">
+                            <h3>Complexity Contributing Factors Breakdown</h3>
+                        </div>
+                        <div class="factors-breakdown-list" id="complexity-factors-container">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. QUALITY SCORING VIEW -->
+                <section class="page-view" id="view-quality">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Requirement Quality Analysis (IEEE 830)</h2>
+                            <p class="view-subtitle">Multi-dimensional quality scoring across clarity, completeness, consistency, specificity, and testability.</p>
+                        </div>
+                    </div>
+
+                    <div class="quality-hero-grid mb-4">
+                        <div class="glass-panel quality-score-circle-panel">
+                            <h3>Overall SRS Quality Score</h3>
+                            <div class="circle-score-wrap">
+                                <svg class="circle-score-svg" viewBox="0 0 120 120">
+                                    <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                                    <circle class="circle-fg" id="quality-circle-fg" cx="60" cy="60" r="50"></circle>
+                                </svg>
+                                <div class="circle-score-content">
+                                    <span class="circle-score-val" id="quality-main-score">0.0</span>
+                                    <span class="circle-score-lbl" id="quality-main-tier">Quality</span>
+                                </div>
+                            </div>
+                            <p class="text-center text-muted text-sm mt-3" id="quality-exec-summary">Quality assessment summary.</p>
+                        </div>
+
+                        <div class="glass-panel quality-dimensions-panel">
+                            <h3>Quality Dimension Breakdown</h3>
+                            <div class="dimensions-bars-list" id="quality-dimensions-container">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quality-advice-grid">
+                        <div class="glass-panel">
+                            <div class="card-header-clean">
+                                <h3>✅ Key Specification Strengths</h3>
+                            </div>
+                            <ul class="quality-bullet-list" id="quality-strengths-list">
+                                <!-- Populated dynamically -->
+                            </ul>
+                        </div>
+
+                        <div class="glass-panel">
+                            <div class="card-header-clean">
+                                <h3>💡 Recommended Quality Improvements</h3>
+                            </div>
+                            <ul class="quality-bullet-list" id="quality-recommendations-list">
+                                <!-- Populated dynamically -->
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 11. REPORT & EXPORT VIEW -->
+                <section class="page-view" id="view-report">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Executive Analysis Report</h2>
+                            <p class="view-subtitle">Full production-ready report ready for export, download, or inclusion in software documentation.</p>
+                        </div>
+                        <div class="header-action-group">
+                            <button class="btn btn-secondary btn-sm" id="report-download-md-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download Markdown (.md)
+                            </button>
+                            <button class="btn btn-secondary btn-sm" id="report-download-txt-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download Text (.txt)
+                            </button>
+                            <button class="btn btn-primary btn-sm" id="report-print-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+                                Print / Save PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel report-preview-card">
+                        <div class="report-preview-header">
+                            <span class="report-preview-title" id="report-doc-title">SRS Analysis Report Preview</span>
+                            <div class="report-view-toggle">
+                                <button class="btn btn-ghost btn-xs active" id="report-toggle-formatted">Formatted View</button>
+                                <button class="btn btn-ghost btn-xs" id="report-toggle-raw">Raw Markdown</button>
+                            </div>
+                        </div>
+                        <div class="report-body-formatted" id="report-formatted-content">
+                            <!-- Populated dynamically -->
+                        </div>
+                        <pre class="report-body-raw hidden" id="report-raw-content"></pre>
+                    </div>
+                </section>
+
+                <!-- 12. ANALYSIS HISTORY VIEW -->
+                <section class="page-view" id="view-history">
+                    <div class="view-header">
+                        <div>
+                            <h2 class="view-title">Analysis History & Audit Archive</h2>
+                            <p class="view-subtitle">Review, reload, and manage all past requirement analysis sessions stored in SQLite.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel">
+                        <div class="table-container">
+                            <table class="custom-table" id="history-full-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Document Title</th>
+                                        <th>Analyzed Date</th>
+                                        <th>Requirements</th>
+                                        <th>FR / NFR</th>
+                                        <th>Quality Score</th>
+                                        <th>Completeness</th>
+                                        <th>Complexity</th>
+                                        <th class="text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="history-full-tbody">
+                                    <!-- Populated dynamically via script.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- ANALYSIS PROGRESS MODAL -->
+    <div class="modal-overlay hidden" id="progress-modal">
+        <div class="progress-modal-card glass-panel">
+            <div class="progress-modal-header">
+                <div class="spinner-ring"></div>
+                <div>
+                    <h3>AI Requirement Analysis in Progress</h3>
+                    <p class="text-muted text-sm">Executing multi-stage NLP & Machine Learning pipeline...</p>
+                </div>
+            </div>
+
+            <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" id="pipeline-progress-bar"></div>
+            </div>
+
+            <div class="pipeline-steps-list">
+                <div class="pipeline-step" id="step-1">
+                    <span class="step-dot"></span>
+                    <span class="step-name">1. Document Parsing & Requirement Extraction</span>
+                    <span class="step-status">Waiting...</span>
+                </div>
+                <div class="pipeline-step" id="step-2">
+                    <span class="step-dot"></span>
+                    <span class="step-name">2. spaCy Tokenization & Lemmatization</span>
+                    <span class="step-status">Waiting...</span>
+                </div>
+                <div class="pipeline-step" id="step-3">
+                    <span class="step-dot"></span>
+                    <span class="step-name">3. TF-IDF + Logistic Regression Classification</span>
+                    <span class="step-status">Waiting...</span>
+                </div>
+                <div class="pipeline-step" id="step-4">
+                    <span class="step-dot"></span>
+                    <span class="step-name">4. Linguistic Ambiguity & Subjectivity Detection</span>
+                    <span class="step-status">Waiting...</span>
+                </div>
+                <div class="pipeline-step" id="step-5">
+                    <span class="step-dot"></span>
+                    <span class="step-name">5. Sentence Transformers Cosine Similarity Embeddings</span>
+                    <span class="step-status">Waiting...</span>
+                </div>
+                <div class="pipeline-step" id="step-6">
+                    <span class="step-dot"></span>
+                    <span class="step-name">6. Domain Knowledge Base Gap Analysis</span>
+                    <span class="step-status">Waiting...</span>
+                </div>
+                <div class="pipeline-step" id="step-7">
+                    <span class="step-dot"></span>
+                    <span class="step-name">7. Multi-Dimensional Quality & Complexity Scoring</span>
+                    <span class="step-status">Waiting...</span>
+                </div>
+                <div class="pipeline-step" id="step-8">
+                    <span class="step-dot"></span>
+                    <span class="step-name">8. Executive Report Compilation & SQLite Persistence</span>
+                    <span class="step-status">Waiting...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REQUIREMENT DETAIL INSPECTION MODAL / DRAWER -->
+    <div class="modal-overlay hidden" id="requirement-detail-modal">
+        <div class="detail-modal-card glass-panel">
+            <div class="detail-modal-header">
+                <div class="detail-header-left">
+                    <span class="badge" id="modal-req-id">REQ-001</span>
+                    <span class="badge" id="modal-req-type">Functional</span>
+                    <span class="badge" id="modal-req-conf">Confidence: 95%</span>
+                </div>
+                <button class="btn-close-modal" id="modal-close-btn" aria-label="Close modal">✕</button>
+            </div>
+
+            <div class="detail-modal-body">
+                <div class="detail-section">
+                    <h4>Original Requirement Statement</h4>
+                    <div class="code-box-display" id="modal-req-text">The system shall allow users to log in with email and password.</div>
+                </div>
+
+                <div class="detail-section">
+                    <h4>NLP Preprocessed & Lemmatized Tokens</h4>
+                    <div class="token-chips-wrap" id="modal-req-tokens">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <div class="detail-two-col">
+                    <div class="detail-col">
+                        <h4>Ambiguity Assessment</h4>
+                        <div class="ambiguity-box" id="modal-amb-box">
+                            <div class="amb-status-row">
+                                <span class="badge" id="modal-amb-badge">Clear</span>
+                                <span class="text-sm text-muted" id="modal-amb-score">Ambiguity Score: 0.0</span>
+                            </div>
+                            <p class="amb-desc" id="modal-amb-explanation">No ambiguous terms detected.</p>
+                            <div class="amb-rewrite-wrap hidden" id="modal-amb-rewrite-wrap">
+                                <strong>AI Suggested Rewrite:</strong>
+                                <p class="amb-rewrite-text" id="modal-amb-rewrite"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-col">
+                        <h4>Quality Dimension Scores</h4>
+                        <div class="quality-mini-meters" id="modal-quality-meters">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section hidden" id="modal-dup-section">
+                    <h4>Semantic Similarity & Duplicate Links</h4>
+                    <div class="dup-mini-links" id="modal-dup-links">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-modal-footer">
+                <button class="btn btn-secondary btn-sm" id="modal-footer-close-btn">Close Inspector</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION SYSTEM -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
