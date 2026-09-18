@@ -84,8 +84,14 @@ class DuplicateDetector:
 
         use_threshold = threshold if threshold is not None else self._similarity_threshold
 
+        # Extract text if list of dictionaries was passed
+        string_reqs = [
+            (r.get("requirement_text") or r.get("text") or str(r)) if isinstance(r, dict) else str(r)
+            for r in requirements
+        ]
+
         # Fast sentence encoding
-        embeddings = self._model.encode(requirements, show_progress_bar=False, batch_size=64)
+        embeddings = self._model.encode(string_reqs, show_progress_bar=False, batch_size=64)
         embeddings = np.asarray(embeddings)
         similarity_matrix = self._cosine_similarity_matrix(embeddings)
 
