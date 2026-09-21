@@ -5,9 +5,16 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Determine API Base URL (auto-connect to http://127.0.0.1:8000 when opened via file:// or non-8000 ports)
-    const API_BASE = (window.location.protocol === 'file:' || !window.location.port || window.location.port !== '8000') 
-        ? 'http://127.0.0.1:8000' 
+    // Determine API Base URL
+    // Auto-connect to http://127.0.0.1:8000 only when testing locally via file:// or non-8000 dev ports
+    // On Vercel / production deployments, use relative URL '' to hit the serverless /api routes
+    const isLocalhost = Boolean(
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname === '[::1]'
+    );
+    const API_BASE = (window.location.protocol === 'file:' || (isLocalhost && window.location.port !== '8000'))
+        ? 'http://127.0.0.1:8000'
         : '';
 
     // ==========================================
