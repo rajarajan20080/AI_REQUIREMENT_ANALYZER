@@ -6,12 +6,7 @@ spaCy based NLP preprocessing utilities used to clean and normalize
 requirement text prior to classification and similarity computation.
 """
 
-from typing import List
-
-import spacy
-from spacy.language import Language
-
-
+from typing import List, Optional
 import re
 
 # Fallback English stop words for serverless/lightweight environments

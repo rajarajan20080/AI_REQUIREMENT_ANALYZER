@@ -417,11 +417,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            jsonResult = await response.json();
-
             if (!response.ok) {
-                throw new Error(jsonResult.detail || "Analysis request failed.");
+                let errorMsg = `Server error (HTTP ${response.status})`;
+                try {
+                    const errJson = await response.json();
+                    errorMsg = errJson.detail || errJson.message || errorMsg;
+                } catch {
+                    const text = await response.text().catch(() => "");
+                    if (text) errorMsg += `: ${text.slice(0, 150)}`;
+                }
+                throw new Error(errorMsg);
             }
+
+            jsonResult = await response.json();
 
             // Complete progress bar
             completeProgressAnimation();
