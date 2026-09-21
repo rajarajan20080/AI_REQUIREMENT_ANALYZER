@@ -28,11 +28,11 @@
       "dest": "/api/index.py"
     },
     {
-      "src": "/styles.css",
+      "src": "/styles.css(.*)",
       "dest": "/frontend/styles.css"
     },
     {
-      "src": "/script.js",
+      "src": "/script.js(.*)",
       "dest": "/frontend/script.js"
     },
     {
